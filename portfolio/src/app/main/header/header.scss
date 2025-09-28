@@ -1,9 +1,5 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  position: static;
   background-color: #141D2F;
 
   height: 109.03px;
@@ -107,6 +103,9 @@
       color: white;
       font-size: 16px;
       padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       
       &:first-child {
         width: 38px;
