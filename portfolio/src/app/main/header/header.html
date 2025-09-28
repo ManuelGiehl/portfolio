@@ -10,17 +10,17 @@
           <a [href]="item.href" class="nav-link">{{ item.label }}</a>
         }
       </nav>
-    </div>
-    
-    <div class="language-selector">
-      @for (lang of languages; track lang.code) {
-        <button 
-          class="lang-button" 
-          [class.active]="lang.code === currentLanguage()"
-        >
-          {{ lang.code }}
-        </button>
-      }
+      
+      <div class="language-selector">
+        @for (lang of languages; track lang.code) {
+          <button 
+            class="lang-button" 
+            [class.active]="lang.code === currentLanguage()"
+          >
+            {{ lang.code }}
+          </button>
+        }
+      </div>
     </div>
   </div>
 </header>

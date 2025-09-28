@@ -41,16 +41,18 @@
     display: flex;
     justify-content: flex-end;
     flex: 1;
-    margin-right: 2rem;
-  }
-  
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    width: 524px;
-    height: 28px;
     gap: 92px;
     align-items: center;
+    width: 100%;
+  }
+  
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: 28px;
+      gap: 40px;
+      align-items: center;
     
     .nav-link {
       color: white;
