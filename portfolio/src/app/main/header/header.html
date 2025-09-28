@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo">
+      <span class="logo-text">Manue<span class="logo-highlight">l</span></span>
+    </div>
+    
+    <div class="center-section">
+      <nav class="navigation">
+        @for (item of navigationItems; track item.id) {
+          <a [href]="item.href" class="nav-link">{{ item.label }}</a>
+        }
+      </nav>
+    </div>
+    
+    <div class="language-selector">
+      @for (lang of languages; track lang.code) {
+        <button 
+          class="lang-button" 
+          [class.active]="lang.code === currentLanguage()"
+        >
+          {{ lang.code }}
+        </button>
+      }
+    </div>
+  </div>
+</header>
