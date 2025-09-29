@@ -1,9 +1,10 @@
 .header {
-  position: static;
+  position: sticky;
+  top: 0;
   background-color: #141D2F;
-
   height: 109.03px;
   font-family: 'Inter';
+  z-index: 1000;
   
   .header-content {
     display: flex;
@@ -11,9 +12,8 @@
     align-items: center;
     justify-content: space-between;
     width: 1440px;
-
     margin: 0 auto;
-    padding: 37px 100px;
+    padding: 37px 0;
   }
   
   .logo {
