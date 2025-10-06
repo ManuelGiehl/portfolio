@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './main/header/header';
 import { Hero } from './main/hero/hero';
 import { About } from './main/about/about';
 import { Skills } from './main/skills/skills';
 import { Portfolio } from './main/portfolio/portfolio';
+import {TranslateService, TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,16 @@ import { Portfolio } from './main/portfolio/portfolio';
   styleUrl: './app.scss'
 })
 export class App {
+  private translate = inject(TranslateService);
+
   protected readonly title = signal('portfolio');
+
+  constructor() {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setFallbackLang('en');
+    this.translate.use('en');
 }
+}
+
+
+

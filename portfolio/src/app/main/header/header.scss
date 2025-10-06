@@ -11,9 +11,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 37px 0;
+    padding: 37px 20px;
   }
   
   .logo {
@@ -54,6 +55,28 @@
       color: white;
       text-decoration: none;
       font-size: 16px;
+      transition: color 0.3s ease;
+      position: relative;
+      
+      &:hover {
+        color: #70E61C;
+      }
+      
+      &.active {
+        color: #70E61C;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 70%;
+          height: 3px;
+          background-color: #9747FF;
+          border-radius: 2px;
+          box-shadow: 0 2px 4px rgba(151, 71, 255, 0.3);
+        }
+      }
       
       &:first-child {
         width: 113px;

@@ -1,0 +1,55 @@
+<section id="portfolio" class="portfolio-section">
+  <div class="green-shadow-left">
+    <img src="/img/skills/greenshadow-skills.png" alt="Green Shadow" class="green-shadow-img">
+  </div>
+  
+  <div class="purple-shadow-left">
+    <img src="/img/portfolio/purpleshadow-portfolio.png" alt="Purple Shadow" class="purple-shadow-img">
+  </div>
+  
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <h2 class="portfolio-title">
+        <div class="title-line-left"></div>
+        Portfolio
+        <div class="title-line-right"></div>
+      </h2>
+      <p class="portfolio-subtitle">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+
+    <div class="projects-container">
+      @for (project of projects; track project.id; let i = $index) {
+        <div class="project-section" [class.even]="i % 2 === 0" [class.odd]="i % 2 === 1">
+          <div class="project-content">
+            <div class="project-text" [class.text-left]="i % 2 === 1" [class.text-right]="i % 2 === 0">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <div class="project-technologies">
+                @for (tech of project.technologies; track tech) {
+                  <span class="tech-tag">{{ tech }}</span>
+                }
+              </div>
+              <p class="project-description">{{ project.description }}</p>
+              <div class="project-buttons">
+                @if (project.liveTestLink !== '#') {
+                  <a class="btn-live" [href]="project.liveTestLink" target="_blank" rel="noopener noreferrer">Live test</a>
+                } @else {
+                  <button class="btn-live" disabled>Live test</button>
+                }
+                @if (project.githubLink !== '#') {
+                  <a class="btn-github" [href]="project.githubLink" target="_blank" rel="noopener noreferrer">Github</a>
+                } @else {
+                  <button class="btn-github" disabled>Github</button>
+                }
+              </div>
+            </div>
+            <div class="project-image" [class.image-left]="i % 2 === 0" [class.image-right]="i % 2 === 1">
+              <div class="laptop-container">
+                <img [src]="project.image" [alt]="project.title" class="project-screenshot">
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

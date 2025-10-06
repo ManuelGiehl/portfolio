@@ -7,7 +7,7 @@
     <div class="center-section">
       <nav class="navigation">
         @for (item of navigationItems; track item.id) {
-          <a [href]="item.href" class="nav-link">{{ item.label }}</a>
+          <a [href]="item.href" class="nav-link" [class.active]="item.active" (click)="scrollToSection($event, item.href)">{{ item.label }}</a>
         }
       </nav>
       

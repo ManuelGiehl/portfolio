@@ -1,0 +1,311 @@
+.portfolio-section {
+  background-color: #141D2F;
+  position: relative;
+  z-index: 5;
+}
+
+.green-shadow-left {
+  position: absolute;
+  left: 0;
+  top: -450px;
+  z-index: 20;
+  pointer-events: none;
+  
+  .green-shadow-img {
+    height: 951.44px;
+    width: auto; 
+    object-fit: contain;
+  }
+}
+
+.purple-shadow-left {
+  position: absolute;
+  left: 0;
+  top: 80%;
+  transform: translateY(-50%);
+  z-index: 15;
+  pointer-events: none;
+  
+  .purple-shadow-img {
+    height: 708px;
+    width: 572.03px;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+.portfolio-container {
+  background-color: #141D2F;
+  min-height: 100vh;
+  top: 70px;
+  position: relative;
+  z-index: 10;
+}
+  
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.portfolio-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 90px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 30px 0;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  gap: 20px;    
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+  
+        
+
+.portfolio-subtitle {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  width: 733px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.project-section {
+  margin-bottom: 120px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: 400px;
+}
+
+.project-text {
+  flex: 1;
+  max-width: 500px;
+  
+  &.text-left {
+    order: 1;
+    text-align: right;
+  }
+  
+  &.text-right {
+    order: 2;
+    text-align: left;
+  }
+}
+
+.project-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #9747FF;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.project-technologies {
+  display: flex;
+  margin-bottom: 25px;
+  
+  .project-text.text-left & {
+    justify-content: flex-end;
+  }
+  
+  .project-text.text-right & {
+    justify-content: flex-start;
+  }
+}
+
+.tech-tag {
+  font-family: 'Poppins', sans-serif;
+  background: none;
+  color: #70E61C;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  box-shadow: none;
+  display: inline-block;
+}
+
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  
+  .project-text.text-left & {
+    justify-content: flex-end;
+  }
+  
+  .project-text.text-right & {
+    justify-content: flex-start;
+  }
+}
+
+.btn-live, .btn-github {
+  font-family: 'Poppins', sans-serif;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  height: 58px;
+  width: auto;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.btn-live {
+  background: linear-gradient(135deg, #8a2be2, #6a1b9a);
+  color: white;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  
+  &:hover {
+    background: #70E61C;
+    color: #ffffff;
+  
+  }
+}
+
+.btn-github {
+  background: transparent;
+  color: white;
+  border: 2px solid #70E61C;
+  
+  &:hover {
+    background: #70E61C;
+    color: #ffffff;
+    
+  }
+}
+
+.project-image {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  
+  &.image-left {
+    order: 1;
+    justify-content: flex-start;
+  }
+  
+  &.image-right {
+    order: 2;
+    justify-content: flex-end;
+  }
+}
+
+.laptop-container {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: none;
+}
+
+.project-screenshot {
+  width: 620px;
+  height: 339px;
+  border-radius: 12px;
+  display: block;
+  box-shadow: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 40px 15px;
+  }
+  
+  .portfolio-title {
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+    .title-line-left,
+    .title-line-right {
+      width: 100px;
+    }
+  }
+  
+  .project-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .project-text {
+    order: 2 !important;
+    text-align: center;
+  }
+  
+  .project-image {
+    order: 1 !important;
+  }
+  
+  .laptop-container {
+    transform: none;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  .project-buttons {
+    justify-content: center;
+  }
+}
