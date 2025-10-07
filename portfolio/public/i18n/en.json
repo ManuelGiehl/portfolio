@@ -31,7 +31,7 @@
       "wraith": {
         "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Wraith to find the way to the next level and defeat the boss."
       },
-      "pokedex": {
+      "pokédex": {
         "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
       }
     },
