@@ -1,0 +1,107 @@
+<section class="contact-section" id="contact">
+  <div class="purple-shadow-container">
+    <img src="/img/contact/purpleshadow-contact.png" alt="Purple shadow" class="purple-shadow-img">
+  </div>
+  
+  <div class="contact-container">
+    <div class="contact-header">
+      <div class="contact-title-container">
+        <h1 class="contact-title">Contact</h1>
+      </div>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-left">
+        <h2 class="contact-heading">Got a problem to solve?</h2>
+        <div class="contact-separator"></div>
+        <p class="contact-description">
+          Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.
+        </p>
+        <p class="contact-cta">
+          Need a Frontend developer? <strong>Contact me!</strong>
+        </p>
+      </div>
+      
+      <div class="contact-right">
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name"
+              class="form-input"
+              placeholder="Your name"
+              (blur)="validateField('name')"
+            >
+            <div class="error-message" *ngIf="getFieldError('name')">
+              {{ getFieldError('name') }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              class="form-input"
+              placeholder="Your email"
+              (blur)="validateField('email')"
+            >
+            <div class="error-message" *ngIf="getFieldError('email')">
+              {{ getFieldError('email') }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <textarea 
+              id="message" 
+              formControlName="message"
+              class="form-textarea"
+              placeholder="Your message"
+              rows="4"
+              (blur)="validateField('message')"
+            ></textarea>
+            <div class="error-message" *ngIf="getFieldError('message')">
+              {{ getFieldError('message') }}
+            </div>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input 
+              type="checkbox" 
+              id="privacy" 
+              formControlName="privacy"
+              class="form-checkbox"
+              (blur)="validateField('privacy')"
+            >
+            <label for="privacy" class="checkbox-label">
+              I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+            </label>
+            <div class="error-message" *ngIf="getFieldError('privacy')">
+              {{ getFieldError('privacy') }}
+            </div>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="submit-button"
+            [disabled]="!contactForm.valid || isSubmitting()"
+            [class.disabled]="!contactForm.valid || isSubmitting()"
+          >
+            {{ isSubmitting() ? 'Sending...' : 'Send message :)' }}
+          </button>
+        </form>
+        
+        <div class="success-message" *ngIf="showSuccessMessage()">
+          <p>Thank you! Your message has been sent successfully.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact-container">
+    <div class="scroll-to-top" (click)="scrollToTop()">
+      <img src="/img/contact/goup-contact.png" alt="Go up" class="goup-icon">
+    </div>
+  </div>
+</section>
