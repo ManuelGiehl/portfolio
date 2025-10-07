@@ -95,7 +95,7 @@
   
   &::after {
     left: calc(100% + 20px);
-    width: 200px; 
+    width: calc(100vw - 50% - 20px);
   }
 }
   
