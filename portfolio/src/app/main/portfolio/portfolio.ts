@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
 interface Project {
@@ -14,11 +15,13 @@ interface Project {
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })
 export class Portfolio {
+  private translate = inject(TranslateService);
+  
   projects: Project[] = [
     {
       id: 1,
@@ -48,4 +51,9 @@ export class Portfolio {
       githubLink: 'https://github.com/ManuelGiehl/pokedex'
     }
   ];
+
+  getProjectDescription(projectTitle: string): string {
+    const projectKey = projectTitle.toLowerCase();
+    return this.translate.instant(`portfolio.projects.${projectKey}.description`);
+  }
 }

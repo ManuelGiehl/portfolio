@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './footer.html',
   styleUrl: './footer.scss'
 })
 export class Footer {
+  private translate = inject(TranslateService);
 
   scrollToHero(): void {
     this.scrollToTop();

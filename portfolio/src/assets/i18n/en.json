@@ -15,30 +15,11 @@
   },
   "skills": {
     "title": "Skills",
-    "subtitle": "I have gained experience in the following areas during my projects.",
-    "question": "Looking for",
-    "questionHighlight": "another skill?",
-    "description": "Reveal enthusiasm for learning new technologies and frameworks.",
-    "button": "Get in touch"
+    "subtitle": "I have gained experience in the following areas during my projects."
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
-    "projects": {
-      "join": {
-        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-      },
-      "wraith": {
-        "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Wraith to find the way to the next level and defeat the boss."
-      },
-      "pokedex": {
-        "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
-      }
-    },
-    "buttons": {
-      "liveTest": "Live Test",
-      "github": "GitHub"
-    }
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
   "contact": {
     "title": "Contact",
@@ -54,25 +35,6 @@
       "sending": "Sending...",
       "success": "Thank you! Your message has been sent successfully."
     }
-  },
-  "feedback": {
-    "quotes": [
-      {
-        "quote": "Manuel really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-        "author": "V. Schuster",
-        "title": "Team Partner"
-      },
-      {
-        "quote": "Manuel's technical skills and problem-solving approach are outstanding. He always finds creative solutions and delivers high-quality work.",
-        "author": "A. Müller",
-        "title": "Project Manager"
-      },
-      {
-        "quote": "Working with Manuel was a pleasure. His attention to detail and dedication to excellence made our project a huge success.",
-        "author": "S. Weber",
-        "title": "Lead Developer"
-      }
-    ]
   },
   "footer": {
     "legal": "Legal Notice",

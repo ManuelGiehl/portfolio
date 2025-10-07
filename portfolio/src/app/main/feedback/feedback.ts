@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface FeedbackItem {
   quote: string;
@@ -11,11 +12,12 @@ interface FeedbackItem {
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './feedback.html',
   styleUrls: ['./feedback.scss']
 })
 export class Feedback {
+  private translate = inject(TranslateService);
   currentIndex = signal(0);
   
   feedbacks: FeedbackItem[] = [
@@ -40,7 +42,14 @@ export class Feedback {
   ];
   
   get currentFeedback(): FeedbackItem {
-    return this.feedbacks[this.currentIndex()];
+    const feedbacks = this.translate.instant('feedback.quotes');
+    const current = feedbacks[this.currentIndex()];
+    return {
+      quote: current.quote,
+      author: current.author,
+      title: current.title,
+      profileImage: this.feedbacks[this.currentIndex()].profileImage
+    };
   }
   
   nextFeedback(): void {

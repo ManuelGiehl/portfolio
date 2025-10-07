@@ -1,14 +1,17 @@
-import { Component, signal, OnInit, HostListener } from '@angular/core';
+import { Component, signal, OnInit, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationItem, Language } from '../interface/interface';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
 export class Header implements OnInit {
+  private translate = inject(TranslateService);
+  
   protected readonly navigationItems: NavigationItem[] = [
     { id: 1, label: 'About me', href: '#about', active: false },
     { id: 2, label: 'Skills', href: '#skills', active: false },
@@ -26,6 +29,33 @@ export class Header implements OnInit {
 
   ngOnInit() {
     this.updateActiveSection();
+    this.initializeLanguage();
+  }
+
+  switchLanguage(langCode: string): void {
+    this.currentLanguage.set(langCode);
+    this.translate.use(langCode.toLowerCase());
+    this.updateNavigationLabels();
+  }
+
+  private initializeLanguage(): void {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'EN';
+    this.currentLanguage.set(savedLang);
+    this.translate.use(savedLang.toLowerCase());
+    this.updateNavigationLabels();
+  }
+
+  private updateNavigationLabels(): void {
+    const lang = this.currentLanguage();
+    if (lang === 'DE') {
+      this.navigationItems[0].label = 'Über mich';
+      this.navigationItems[1].label = 'Skills';
+      this.navigationItems[2].label = 'Portfolio';
+    } else {
+      this.navigationItems[0].label = 'About me';
+      this.navigationItems[1].label = 'Skills';
+      this.navigationItems[2].label = 'Portfolio';
+    }
   }
 
   @HostListener('window:scroll')

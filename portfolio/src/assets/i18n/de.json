@@ -15,30 +15,11 @@
   },
   "skills": {
     "title": "Skills",
-    "subtitle": "Ich habe Erfahrung in den folgenden Bereichen während meiner Projekte gesammelt.",
-    "question": "Suchst du nach",
-    "questionHighlight": "einer anderen Fähigkeit?",
-    "description": "Zeige Begeisterung für das Lernen neuer Technologien und Frameworks.",
-    "button": "Kontakt aufnehmen"
+    "subtitle": "Ich habe Erfahrung in den folgenden Bereichen während meiner Projekte gesammelt."
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-    "projects": {
-      "join": {
-        "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
-      },
-      "wraith": {
-        "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Wraith, den Weg zum nächsten Level zu finden und den Boss zu besiegen."
-      },
-      "pokedex": {
-        "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
-      }
-    },
-    "buttons": {
-      "liveTest": "Live Test",
-      "github": "GitHub"
-    }
+    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
   "contact": {
     "title": "Kontakt",
@@ -54,25 +35,6 @@
       "sending": "Wird gesendet...",
       "success": "Danke! Deine Nachricht wurde erfolgreich gesendet."
     }
-  },
-  "feedback": {
-    "quotes": [
-      {
-        "quote": "Manuel hat das Team wirklich mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-        "author": "V. Schuster",
-        "title": "Team-Partner"
-      },
-      {
-        "quote": "Manuels technische Fähigkeiten und Problemlösungsansatz sind herausragend. Er findet immer kreative Lösungen und liefert hochwertige Arbeit.",
-        "author": "A. Müller",
-        "title": "Projektmanager"
-      },
-      {
-        "quote": "Die Zusammenarbeit mit Manuel war ein Vergnügen. Seine Aufmerksamkeit für Details und Hingabe zur Exzellenz machten unser Projekt zu einem großen Erfolg.",
-        "author": "S. Weber",
-        "title": "Lead-Entwickler"
-      }
-    ]
   },
   "footer": {
     "legal": "Impressum",

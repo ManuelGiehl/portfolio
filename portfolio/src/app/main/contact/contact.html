@@ -6,18 +6,18 @@
   <div class="contact-container">
     <div class="contact-header">
       <div class="contact-title-container">
-        <h1 class="contact-title">Contact</h1>
+        <h1 class="contact-title">{{ 'contact.title' | translate }}</h1>
       </div>
     </div>
     
     <div class="contact-content">
       <div class="contact-left">
-        <h2 class="contact-heading">Got a problem to solve?</h2>
+        <h2 class="contact-heading">{{ 'contact.heading' | translate }}</h2>
         <p class="contact-description">
-          Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.
+          {{ 'contact.description' | translate }}
         </p>
         <p class="contact-cta">
-          Need a Frontend developer? <strong>Contact me!</strong>
+          {{ 'contact.cta' | translate }}
         </p>
       </div>
       
@@ -29,7 +29,7 @@
               id="name" 
               formControlName="name"
               class="form-input"
-              placeholder="Your name"
+              [placeholder]="'contact.form.name' | translate"
               (blur)="validateField('name')"
             >
             <div class="error-message" *ngIf="getFieldError('name')">
@@ -43,7 +43,7 @@
               id="email" 
               formControlName="email"
               class="form-input"
-              placeholder="Your email"
+              [placeholder]="'contact.form.email' | translate"
               (blur)="validateField('email')"
             >
             <div class="error-message" *ngIf="getFieldError('email')">
@@ -56,7 +56,7 @@
               id="message" 
               formControlName="message"
               class="form-textarea"
-              placeholder="Your message"
+              [placeholder]="'contact.form.message' | translate"
               rows="4"
               (blur)="validateField('message')"
             ></textarea>
@@ -74,7 +74,7 @@
               (blur)="validateField('privacy')"
             >
             <label for="privacy" class="checkbox-label">
-              I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+              {{ 'contact.form.privacy' | translate }}
             </label>
             <div class="error-message" *ngIf="getFieldError('privacy')">
               {{ getFieldError('privacy') }}
@@ -87,12 +87,12 @@
             [disabled]="!contactForm.valid || isSubmitting()"
             [class.disabled]="!contactForm.valid || isSubmitting()"
           >
-            {{ isSubmitting() ? 'Sending...' : 'Send message :)' }}
+            {{ isSubmitting() ? ('contact.form.sending' | translate) : ('contact.form.submit' | translate) }}
           </button>
         </form>
         
         <div class="success-message" *ngIf="showSuccessMessage()">
-          <p>Thank you! Your message has been sent successfully.</p>
+          <p>{{ 'contact.form.success' | translate }}</p>
         </div>
       </div>
     </div>

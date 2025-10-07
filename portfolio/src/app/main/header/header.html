@@ -16,6 +16,7 @@
           <button 
             class="lang-button" 
             [class.active]="lang.code === currentLanguage()"
+            (click)="switchLanguage(lang.code)"
           >
             {{ lang.code }}
           </button>

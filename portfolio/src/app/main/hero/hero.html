@@ -9,11 +9,11 @@
       
       <div class="hero-right">
         <div class="hero-text">
-          <div class="i-am-container">I am</div>
+          <div class="i-am-container">{{ 'hero.iam' | translate }}</div>
           <div class="text-content">
             <h1 class="hero-name">{{ developerName() }}</h1>
-            <p class="hero-title">{{ developerTitle() }}</p>
-            <button class="cta-button" (click)="onCtaClick()">Let's talk!</button>
+            <p class="hero-title">{{ 'hero.title' | translate }}</p>
+            <button class="cta-button" (click)="onCtaClick()">{{ 'hero.cta' | translate }}</button>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
       </div>
       
       <div class="scroll-indicator">
-        <span class="scroll-text">Scroll down</span>
+        <span class="scroll-text">{{ 'hero.scroll' | translate }}</span>
         <img src="/img/hero/arrow.png" alt="Scroll down arrow" class="scroll-arrow">
       </div>
     </div>

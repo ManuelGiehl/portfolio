@@ -9,9 +9,9 @@
   
   <div class="portfolio-header">
     <div class="section-header">
-      <h2 class="title">Portfolio</h2>
-    </div>
-    <p class="portfolio-subtitle">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <h2 class="title">{{ 'portfolio.title' | translate }}</h2>
+      </div>
+      <p class="portfolio-subtitle">{{ 'portfolio.subtitle' | translate }}</p>
   </div>
   
   <div class="portfolio-container">
@@ -27,17 +27,17 @@
                   <span class="tech-tag">{{ tech }}</span>
                 }
               </div>
-              <p class="project-description">{{ project.description }}</p>
+              <p class="project-description">{{ getProjectDescription(project.title) }}</p>
               <div class="project-buttons">
                 @if (project.liveTestLink !== '#') {
-                  <a class="btn-live" [href]="project.liveTestLink" target="_blank" rel="noopener noreferrer">Live test</a>
+                  <a class="btn-live" [href]="project.liveTestLink" target="_blank" rel="noopener noreferrer">{{ 'portfolio.buttons.liveTest' | translate }}</a>
                 } @else {
-                  <button class="btn-live" disabled>Live test</button>
+                  <button class="btn-live" disabled>{{ 'portfolio.buttons.liveTest' | translate }}</button>
                 }
                 @if (project.githubLink !== '#') {
-                  <a class="btn-github" [href]="project.githubLink" target="_blank" rel="noopener noreferrer">Github</a>
+                  <a class="btn-github" [href]="project.githubLink" target="_blank" rel="noopener noreferrer">{{ 'portfolio.buttons.github' | translate }}</a>
                 } @else {
-                  <button class="btn-github" disabled>Github</button>
+                  <button class="btn-github" disabled>{{ 'portfolio.buttons.github' | translate }}</button>
                 }
               </div>
             </div>

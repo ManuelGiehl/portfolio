@@ -1,16 +1,19 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule, TranslateModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
 export class Contact {
+  private translate = inject(TranslateService);
+  
   contactForm: FormGroup;
   isSubmitting = signal(false);
   showSuccessMessage = signal(false);
