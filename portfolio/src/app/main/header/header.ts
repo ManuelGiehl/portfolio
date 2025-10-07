@@ -12,7 +12,8 @@ export class Header implements OnInit {
   protected readonly navigationItems: NavigationItem[] = [
     { id: 1, label: 'About me', href: '#about', active: false },
     { id: 2, label: 'Skills', href: '#skills', active: false },
-    { id: 3, label: 'Portfolio', href: '#portfolio', active: false }
+    { id: 3, label: 'Portfolio', href: '#portfolio', active: false },
+    { id: 4, label: 'Feedback', href: '#feedback', active: false }
   ];
   
   private isManualClick = false;
@@ -125,7 +126,7 @@ export class Header implements OnInit {
   }
 
   private detectCurrentSection(): string {
-    const sections = ['#about', '#skills', '#portfolio'];
+    const sections = ['#about', '#skills', '#portfolio', '#feedback'];
     let currentSection = '';
     
     sections.forEach(section => {

@@ -1,0 +1,297 @@
+.feedback-section {
+  background-color: #141D2F;
+  padding: 150px 0 100px 0;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.feedback-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.quote-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.quote-marks {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 3;
+  margin-left: 2.2rem;
+  
+  .quote-img {
+    width: 96.9px;
+    height: 68.1px;
+    object-fit: contain;
+  }
+}
+
+.quote-box {
+  background-color: #141D2F;
+  border: 4px solid #70E61C;
+  border-radius: 32px;
+  padding: 48px 96px;
+  position: relative;
+  width: 951.5px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 44px;
+  margin-left: 80px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
+.quote-text-container {
+  width: 659.5px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.quote-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 120%;
+  letter-spacing: 0%;
+  width: 100%;
+  text-align: justify;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 659.5px;
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .author-line {
+    height: 2px;
+    background-color: #9747FF;
+    flex: 1;
+    min-width: 20px;
+  }
+  
+  .author-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    white-space: nowrap;
+  }
+  
+  .author-separator {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+  
+  .author-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9747FF;
+    white-space: nowrap;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #9747FF;
+      border-radius: 1px;
+    }
+  }
+}
+
+.profile-section {
+  flex: 0 0 auto;
+  position: relative;
+  
+  .profile-image {
+    width: 272px;
+    height: 272px;
+    border-radius: 50%;
+    border: 4px solid #9747FF;
+    overflow: hidden;
+    position: relative;
+    
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -100vw;
+    width: 100vw;
+    height: 4px;
+    background-color: #9747FF;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.navigation-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  
+  .nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+    width: 40px;
+    height: 40px;
+    
+    &:hover {
+      border: 2px solid #70E61C;
+      border-radius: 50%;
+    }
+    
+   
+    
+    .arrow-img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      
+    }
+  }
+  
+  .dots-container {
+    display: flex;
+    gap: 1rem;
+    
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      
+      background-color: #9747FF;
+    
+      &.active {
+        background-color: #70E61C;
+        
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .feedback-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .quote-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .quote-box {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .quote-text {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quote-author {
+    align-items: center;
+  }
+  
+  .profile-section {
+    order: -1;
+    
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  .navigation-controls {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-section {
+    padding: 60px 0;
+  }
+  
+  .quote-box {
+    padding: 1rem;
+  }
+  
+  .quote-text {
+    font-size: 14px;
+  }
+  
+  .profile-section .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}

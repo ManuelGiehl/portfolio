@@ -5,11 +5,12 @@ import { Hero } from './main/hero/hero';
 import { About } from './main/about/about';
 import { Skills } from './main/skills/skills';
 import { Portfolio } from './main/portfolio/portfolio';
+import { Feedback } from './main/feedback/feedback';
 import {TranslateService, TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, About, Skills, Portfolio],
+  imports: [RouterOutlet, Header, Hero, About, Skills, Portfolio, Feedback],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
