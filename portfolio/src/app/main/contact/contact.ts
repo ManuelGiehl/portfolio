@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
@@ -14,8 +15,10 @@ export class Contact {
   isSubmitting = signal(false);
   showSuccessMessage = signal(false);
   fieldErrors = signal<{[key: string]: string}>({});
+  
+  private readonly FORMSPREE_ENDPOINT = 'https://formspree.io/f/xovklgzn';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -58,11 +61,21 @@ export class Contact {
     return 'Invalid input';
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.contactForm.valid) {
       this.isSubmitting.set(true);
       
-      setTimeout(() => {
+      try {
+        const formData = {
+          name: this.contactForm.value.name,
+          email: this.contactForm.value.email,
+          message: this.contactForm.value.message,
+          _subject: 'Neue Nachricht von Portfolio - ' + this.contactForm.value.name,
+          _replyto: this.contactForm.value.email
+        };
+
+        await this.http.post(this.FORMSPREE_ENDPOINT, formData).toPromise();
+
         this.isSubmitting.set(false);
         this.showSuccessMessage.set(true);
         this.contactForm.reset();
@@ -71,9 +84,13 @@ export class Contact {
         setTimeout(() => {
           this.showSuccessMessage.set(false);
         }, 5000);
-      }, 2000);
+
+      } catch (error) {
+        console.error('E-Mail konnte nicht gesendet werden:', error);
+        this.isSubmitting.set(false);
+        alert('Es gab einen Fehler beim Senden der E-Mail. Bitte versuche es später erneut.');
+      }
     } else {
-  
       Object.keys(this.contactForm.controls).forEach(key => {
         this.contactForm.get(key)?.markAsTouched();
         this.validateField(key);
