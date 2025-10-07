@@ -40,6 +40,17 @@ export class Header implements OnInit {
     this.startSmoothScroll(href);
   }
 
+  scrollToHero(): void {
+    this.scrollToTop();
+  }
+
+  private scrollToTop(): void {
+    const startPosition = window.pageYOffset;
+    const distance = -startPosition;
+    
+    this.animateScroll(startPosition, distance);
+  }
+
   private setActiveTab(href: string) {
     this.isManualClick = true;
     

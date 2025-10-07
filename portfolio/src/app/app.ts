@@ -8,11 +8,12 @@ import { Skills } from './main/skills/skills';
 import { Portfolio } from './main/portfolio/portfolio';
 import { Feedback } from './main/feedback/feedback';
 import { Contact } from './main/contact/contact';
+import { Footer } from './main/footer/footer';
 import {TranslateService, TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule, Header, Hero, About, Skills, Portfolio, Feedback, Contact],
+  imports: [RouterOutlet, ReactiveFormsModule, Header, Hero, About, Skills, Portfolio, Feedback, Contact, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
