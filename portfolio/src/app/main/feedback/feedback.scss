@@ -3,7 +3,27 @@
   padding: 150px 0 100px 0;
   position: relative;
   z-index: 5;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.green-shadow-container {
+  position: absolute;
+  top: -500px;
+  right: 0;
+  width: 100%;
+  height: calc(100% + 500px);
+  z-index: 1;
+  pointer-events: none;
+  
+  .green-shadow-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 428.59px;
+    height: 951.44px;
+    object-fit: contain;
+    object-position: right center;
+  }
 }
 
 .feedback-container {
