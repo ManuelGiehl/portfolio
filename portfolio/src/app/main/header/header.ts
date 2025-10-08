@@ -26,6 +26,7 @@ export class Header implements OnInit {
   ];
 
   protected readonly currentLanguage = signal<string>('EN');
+  protected readonly isMobileMenuOpen = signal<boolean>(false);
 
   ngOnInit() {
     this.updateActiveSection();
@@ -186,5 +187,13 @@ export class Header implements OnInit {
     this.navigationItems.forEach(item => {
       item.active = item.href === currentSection;
     });
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen.set(!this.isMobileMenuOpen());
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen.set(false);
   }
 }
