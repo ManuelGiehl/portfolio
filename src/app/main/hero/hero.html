@@ -1,0 +1,45 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="profile-image">
+          <img src="/img/hero/herome.png" [alt]="developerName()" class="profile-img">
+        </div>
+      </div>
+      
+      <div class="hero-right">
+        <div class="hero-text">
+          <div class="i-am-container">{{ 'hero.iam' | translate }}</div>
+          <div class="text-content">
+            <h1 class="hero-name">{{ developerName() }}</h1>
+            <p class="hero-title">{{ 'hero.title' | translate }}</p>
+            <button class="cta-button" (click)="onCtaClick()">{{ 'hero.cta' | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-footer">
+      <div class="contact-info">
+        <div class="purple-line"></div>
+        <a href="https://github.com/ManuelGiehl/" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <img src="/img/hero/github.png" alt="GitHub" class="contact-icon">
+        </a>
+        <a href="mailto:manuelgiehl@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <img src="/img/hero/email.png" alt="Email" class="contact-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span style="display:none;"></span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <img src="/img/hero/linkedin.png" alt="LinkedIn" class="contact-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span style="display:none;"></span>
+        </a>
+        <span class="email-text">{{ email() }}</span>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span class="scroll-text">{{ 'hero.scroll' | translate }}</span>
+        <img src="/img/hero/arrow.png" alt="Scroll down arrow" class="scroll-arrow">
+      </div>
+    </div>
+  </div>
+</section>

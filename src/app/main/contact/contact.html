@@ -1,0 +1,106 @@
+<section class="contact-section" id="contact">
+  <div class="purple-shadow-container">
+    <img src="/img/contact/purpleshadow-contact.png" alt="Purple shadow" class="purple-shadow-img">
+  </div>
+  
+  <div class="contact-container">
+    <div class="contact-header">
+      <div class="contact-title-container">
+        <h1 class="contact-title">{{ 'contact.title' | translate }}</h1>
+      </div>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-left">
+        <h2 class="contact-heading">{{ 'contact.heading' | translate }}</h2>
+        <p class="contact-description">
+          {{ 'contact.description' | translate }}
+        </p>
+        <p class="contact-cta">
+          {{ 'contact.cta' | translate }}
+        </p>
+      </div>
+      
+      <div class="contact-right">
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name"
+              class="form-input"
+              [placeholder]="'contact.form.name' | translate"
+              (blur)="validateField('name')"
+            >
+            <div class="error-message" *ngIf="getFieldError('name')">
+              {{ getFieldError('name') }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              class="form-input"
+              [placeholder]="'contact.form.email' | translate"
+              (blur)="validateField('email')"
+            >
+            <div class="error-message" *ngIf="getFieldError('email')">
+              {{ getFieldError('email') }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <textarea 
+              id="message" 
+              formControlName="message"
+              class="form-textarea"
+              [placeholder]="'contact.form.message' | translate"
+              rows="4"
+              (blur)="validateField('message')"
+            ></textarea>
+            <div class="error-message" *ngIf="getFieldError('message')">
+              {{ getFieldError('message') }}
+            </div>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input 
+              type="checkbox" 
+              id="privacy" 
+              formControlName="privacy"
+              class="form-checkbox"
+              (blur)="validateField('privacy')"
+            >
+            <label for="privacy" class="checkbox-label">
+              {{ 'contact.form.privacy' | translate }}
+            </label>
+            <div class="error-message" *ngIf="getFieldError('privacy')">
+              {{ getFieldError('privacy') }}
+            </div>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="submit-button"
+            [disabled]="!contactForm.valid || isSubmitting()"
+            [class.disabled]="!contactForm.valid || isSubmitting()"
+          >
+            {{ isSubmitting() ? ('contact.form.sending' | translate) : ('contact.form.submit' | translate) }}
+          </button>
+        </form>
+        
+        <div class="success-message" *ngIf="showSuccessMessage()">
+          <p>{{ 'contact.form.success' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact-container">
+    <div class="scroll-to-top" (click)="scrollToTop()">
+      <img src="/img/contact/goup-contact.png" alt="Go up" class="goup-icon">
+    </div>
+  </div>
+</section>
