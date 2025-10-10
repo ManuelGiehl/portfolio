@@ -1,0 +1,57 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo" (click)="scrollToHero()">
+      <span class="logo-text">Manue<span class="logo-highlight">l</span></span>
+    </div>
+    
+    <div class="center-section">
+      <nav class="navigation">
+        @for (item of navigationItems; track item.id) {
+          <a [href]="item.href" class="nav-link" [class.active]="item.active" (click)="scrollToSection($event, item.href)">{{ item.label }}</a>
+        }
+      </nav>
+      
+      <div class="language-selector">
+        @for (lang of languages; track lang.code) {
+          <button 
+            class="lang-button" 
+            [class.active]="lang.code === currentLanguage()"
+            (click)="switchLanguage(lang.code)"
+          >
+            {{ lang.code }}
+          </button>
+        }
+      </div>
+    </div>
+    
+    <div class="burger-menu" (click)="toggleMobileMenu()">
+      <div class="burger-line" [class.active]="isMobileMenuOpen()"></div>
+      <div class="burger-line" [class.active]="isMobileMenuOpen()"></div>
+      <div class="burger-line" [class.active]="isMobileMenuOpen()"></div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" [class.open]="isMobileMenuOpen()">
+  <button class="close-menu-button" (click)="closeMobileMenu()">
+    <span class="close-icon">×</span>
+  </button>
+  
+  <nav class="mobile-navigation">
+    @for (item of navigationItems; track item.id) {
+      <a [href]="item.href" class="mobile-nav-link" [class.active]="item.active" (click)="scrollToSection($event, item.href); closeMobileMenu()">{{ item.label }}</a>
+    }
+    
+    <div class="mobile-language-selector">
+      @for (lang of languages; track lang.code) {
+        <button 
+          class="mobile-lang-button" 
+          [class.active]="lang.code === currentLanguage()"
+          (click)="switchLanguage(lang.code)"
+        >
+          {{ lang.code }}
+        </button>
+      }
+    </div>
+  </nav>
+</div>

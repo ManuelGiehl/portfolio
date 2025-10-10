@@ -1,0 +1,57 @@
+<section class="feedback-section" id="feedback">
+  <div class="green-shadow-container">
+    <img src="/img/feedback/greenshadow-feedback.png" alt="Green shadow" class="green-shadow-img">
+  </div>
+  <div class="feedback-container">
+    <div class="feedback-content">
+      <div class="quote-section">
+        <div class="quote-marks">
+          <img src="/img/feedback/quotes.png" alt="Quote marks" class="quote-img">
+        </div>
+        
+        <div class="quote-box">
+          <div class="quote-text-container">
+            <div class="quote-text">
+              {{ currentFeedback.quote }}
+            </div>
+          </div>
+          
+          <div class="quote-author">
+            <div class="author-info">
+              <div class="author-line"></div>
+              <span class="author-name">{{ currentFeedback.author }}</span>
+              <span class="author-separator">-</span>
+              <span class="author-title">{{ currentFeedback.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <div class="profile-image">
+          <img [src]="currentFeedback.profileImage" [alt]="currentFeedback.author" class="profile-img">
+        </div>
+      </div>
+    </div>
+    
+    <div class="navigation-controls">
+      <button class="nav-arrow nav-left" (click)="previousFeedback()">
+        <img src="/img/feedback/arrow-left.svg" alt="Previous" class="arrow-img">
+      </button>
+      
+      <div class="dots-container">
+        @for (feedback of feedbacks; track $index) {
+          <button 
+            class="dot" 
+            [class.active]="$index === currentIndex()"
+            (click)="goToFeedback($index)">
+          </button>
+        }
+      </div>
+      
+      <button class="nav-arrow nav-right" (click)="nextFeedback()">
+        <img src="/img/feedback/arrow-right.svg" alt="Next" class="arrow-img">
+      </button>
+    </div>
+  </div>
+</section>

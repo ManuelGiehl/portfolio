@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "iam": "I am",
+    "title": "FULLSTACK DEVELOPER",
+    "cta": "Lass uns reden!",
+    "scroll": "Nach unten scrollen"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Ich bin ein Frontend-Entwickler aus München, Deutschland. Ich helfe gerne Designern und Unternehmen dabei, ihre Ideen zum Leben zu erwecken. Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Web-Entwickler fortzusetzen.",
+    "cta": "Wenn du denkst, dass ich gut zu deinen Projekten passe, kontaktiere mich!",
+    "location": "Wo befindest du dich? Bist du offen für verschiedene Arbeitsweisen, wie Remote-Arbeit oder sogar Umzug?",
+    "lightbulb": "Zeige, dass du aufgeschlossen bist. Bist du begeistert davon, neue Technologien zu lernen und deine Fähigkeiten kontinuierlich zu verbessern?",
+    "puzzle": "Eine kurze Beschreibung deines Problemlösungsansatzes. Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst? Du kannst Schlüsselwörter wie: analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit einbeziehen."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Ich habe Erfahrung in den folgenden Bereichen während meiner Projekte gesammelt.",
+    "question": "Suchst du nach",
+    "questionHighlight": "einer anderen Fähigkeit?",
+    "description": "Zeige Begeisterung für das Lernen neuer Technologien und Frameworks.",
+    "button": "Kontakt aufnehmen"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projects": {
+      "join": {
+        "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+      },
+      "wraith": {
+        "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Wraith, den Weg zum nächsten Level zu finden und den Boss zu besiegen."
+      },
+      "pokédex": {
+        "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+      }
+    },
+    "buttons": {
+      "liveTest": "Live Test",
+      "github": "GitHub"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "heading": "Hast du ein Problem zu lösen?",
+    "description": "Ermutige Menschen, dich zu kontaktieren und beschreibe, welche Rolle dich interessiert. Zeige, dass du Wert zu ihren Projekten durch deine Arbeit hinzufügen wirst.",
+    "cta": "Brauchst du einen Frontend-Entwickler? Kontaktiere mich!",
+    "form": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht",
+      "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "submit": "Nachricht senden :)",
+      "sending": "Wird gesendet...",
+      "success": "Danke! Deine Nachricht wurde erfolgreich gesendet."
+    }
+  },
+  "feedback": {
+    "quotes": [
+      {
+        "quote": "Manuel hat das Team wirklich mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+        "author": "V. Schuster",
+        "title": "Team-Partner"
+      },
+      {
+        "quote": "Manuels technische Fähigkeiten und Problemlösungsansatz sind herausragend. Er findet immer kreative Lösungen und liefert hochwertige Arbeit.",
+        "author": "A. Müller",
+        "title": "Projektmanager"
+      },
+      {
+        "quote": "Die Zusammenarbeit mit Manuel war ein Vergnügen. Seine Aufmerksamkeit für Details und Hingabe zur Exzellenz machten unser Projekt zu einem großen Erfolg.",
+        "author": "S. Weber",
+        "title": "Lead-Entwickler"
+      }
+    ]
+  },
+  "footer": {
+    "legal": "Impressum",
+    "copyright": "© Manuel Giehl 2025"
+  }
+}

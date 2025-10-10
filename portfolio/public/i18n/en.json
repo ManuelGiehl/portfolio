@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "iam": "I am",
+    "title": "FULLSTACK DEVELOPER",
+    "cta": "Let's talk!",
+    "scroll": "Scroll down"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "I'm a Frontend developer based in Munich, Germany. I enjoy helping designers and companies bring their ideas to real life. I am looking forward to continuing my developer career with a job in a web developer position.",
+    "cta": "If you think I'd be a good match for your projects, contact me!",
+    "location": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
+    "lightbulb": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+    "puzzle": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "I have gained experience in the following areas during my projects.",
+    "question": "Looking for",
+    "questionHighlight": "another skill?",
+    "description": "Reveal enthusiasm for learning new technologies and frameworks.",
+    "button": "Get in touch"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "projects": {
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "wraith": {
+        "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Wraith to find the way to the next level and defeat the boss."
+      },
+      "pokédex": {
+        "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+      }
+    },
+    "buttons": {
+      "liveTest": "Live Test",
+      "github": "GitHub"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Got a problem to solve?",
+    "description": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "cta": "Need a Frontend developer? Contact me!",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "privacy": "I've read the privacy policy and agree to the processing of my data as outlined.",
+      "submit": "Send message :)",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully."
+    }
+  },
+  "feedback": {
+    "quotes": [
+      {
+        "quote": "Manuel really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+        "author": "V. Schuster",
+        "title": "Team Partner"
+      },
+      {
+        "quote": "Manuel's technical skills and problem-solving approach are outstanding. He always finds creative solutions and delivers high-quality work.",
+        "author": "A. Müller",
+        "title": "Project Manager"
+      },
+      {
+        "quote": "Working with Manuel was a pleasure. His attention to detail and dedication to excellence made our project a huge success.",
+        "author": "S. Weber",
+        "title": "Lead Developer"
+      }
+    ]
+  },
+  "footer": {
+    "legal": "Legal Notice",
+    "copyright": "© Manuel Giehl 2025"
+  }
+}
