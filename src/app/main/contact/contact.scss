@@ -35,7 +35,7 @@
   padding: 0 2rem;
   position: relative;
   z-index: 10;
-  overflow: hidden;
+  overflow: visible;
   
   &:last-child {
     position: relative;
@@ -68,8 +68,8 @@
         position: absolute;
         top: 50%;
         right: calc(100% + 20px);
-        width: clamp(20px, 8vw, 110px);
-        max-width: calc(50vw - 40px);
+        width: 100vw;
+        pointer-events: none;
         height: 2px;
         background-color: #9747FF;
         transform: translateY(-50%);
@@ -320,6 +320,18 @@
 
 // Responsive Design
 @media (max-width: 768px) {
+  .contact-header {
+    .contact-title-container {
+      .contact-title {
+        font-size: 60px;
+        
+        &::before {
+          right: calc(100% + 10px);
+        }
+      }
+    }
+  }
+  
   .contact-content {
     flex-direction: column;
     gap: 2rem;
@@ -330,16 +342,16 @@
     
     .contact-heading {
       font-size: 32px;
-      text-align: center;
+      
     }
     
     .contact-description {
-      text-align: center;
+      
       max-width: 100%;
     }
     
     .contact-cta {
-      text-align: center;
+      
     }
   }
   
@@ -351,8 +363,24 @@
     }
   }
   
+  .contact-right {
+    max-width: 100%;
+    width: 100%;
+  }
+  
   .contact-form {
     max-width: 100%;
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .scroll-to-top {
@@ -360,5 +388,41 @@
     right: 1rem;
     width: 45px;
     height: 45px;
+  }
+}
+
+@media (max-width: 490px) {
+  .contact-header .contact-title-container .contact-title {
+    &::before {
+      right: calc(100% + 20px);
+      width: calc(100vw - 100% - 2rem);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-header .contact-title-container .contact-title {
+    &::before {
+      right: calc(100% + 20px);
+      width: calc(100vw - 100% - 2rem);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-header .contact-title-container .contact-title {
+    &::before {
+      right: calc(100% + 20px);
+      width: calc(100vw - 100% - 2rem);
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-header .contact-title-container .contact-title {
+    &::before {
+      right: calc(100% + 20px);
+      width: calc(100vw - 100% - 2rem);
+    }
   }
 }

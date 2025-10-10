@@ -2,7 +2,7 @@
   background-color: #141D2F;
   position: relative;
   z-index: 5;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .portfolio-container .green-shadow-left {
@@ -44,7 +44,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem 100px 2rem;
-  overflow: visible;
+  overflow: hidden;
 }
   
 
@@ -100,8 +100,10 @@
   
   &::after {
     left: calc(100% + 20px);
-    width: clamp(20px, 8vw, 110px);
-    max-width: calc(50vw - 40px);
+    width: 100vw;
+    pointer-events: none;
+    max-width: none;
+    z-index: 1;
   }
 }
   
@@ -396,6 +398,13 @@
       
       &::before, &::after {
         width: clamp(40px, 8vw, 120px);
+      }
+      
+      &::after {
+        width: 100vw;
+        pointer-events: none;
+        max-width: none;
+        z-index: 1;
       }
     }
   }
