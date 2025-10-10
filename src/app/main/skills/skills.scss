@@ -2,7 +2,7 @@
   background-color: #141D2F;
   padding: 100px 0;
   position: relative;
-  z-index: 5;
+ 
   
 .skills-container {
   max-width: 1440px;
@@ -51,8 +51,8 @@
     }
     
     .skill-icon {
-      width: 48px;
-      height: 48px;
+      width: 88px;
+      height: 101px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -292,8 +292,8 @@
     
     .skill-item {
       .skill-icon {
-        width: 48px;
-        height: 48px;
+        width: 88px;
+        height: 101px;
       }
     }
   }
@@ -389,14 +389,14 @@
 
 @media (max-width: 440px) {
   .skills .skill-item .skill-icon {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
   }
 }
 
 @media (max-width: 400px) {
   .skills .skill-item .skill-icon {
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
   }
 }

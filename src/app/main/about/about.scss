@@ -111,6 +111,12 @@
           font-size: 24px;
           color: #141D2F;
           flex-shrink: 0;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          
+          &:hover {
+            transform: scale(1.2);
+          }
           
           .about-icon {
             width: 48px;
