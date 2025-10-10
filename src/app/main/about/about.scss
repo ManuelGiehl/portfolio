@@ -13,14 +13,14 @@
     top: -650px;
     z-index: 1;
     pointer-events: none;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .curve-image {
     width: 100%;
     height: auto;
     position: absolute;
-    top: clamp(-80vh, -65vh + 2vw, -50vh);
+    top: clamp(-65vh, -20vh - 0.3vw, -90vh);
     left: 0;
     z-index: 1;
     pointer-events: none;
@@ -50,7 +50,7 @@
     padding: 0 2rem;
     position: relative;
     z-index: 10;
-    overflow: hidden;
+    overflow: visible;
   }
   
   .about-content {
@@ -175,8 +175,45 @@
 }
 
 // Responsive Design
+@media (min-width: 1440px) {
+  .about {
+    .curve-image {
+      top: -68vh;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    .curve-image {
+      top: -62vh;
+    }
+  }
+}
+
+@media (max-width: 1165px) {
+  .about {
+    .curve-image {
+      top: -60vh;
+    }
+  }
+}
+
+@media (max-width: 1010px) {
+  .about {
+    .curve-image {
+      top: -60vh;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .about {
+    .curve-image {
+      top: -67vh;
+      rotate: 6deg;
+    }
+    
     .about-content {
       flex-direction: column;
       gap: 2rem;
@@ -190,6 +227,122 @@
     
     .about-image {
       order: -1;
+    }
+  }
+}
+
+@media (max-width: 938px) {
+  .about {
+    .curve-image {
+      top: -66vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  .about {
+    .curve-image {
+      top: -64vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .about {
+    .curve-image {
+      top: -62vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 743px) {
+  .about {
+    .curve-image {
+      top: -60vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .about {
+    .curve-image {
+      top: -58vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    .curve-image {
+      top: -56vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .about {
+    .curve-image {
+      top: -58vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .about {
+    .curve-image {
+      top: -56.5vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    .curve-image {
+      top: -55.5vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .about {
+    .curve-image {
+      top: -56.9vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    .curve-image {
+      top: -56vh;
+      rotate: 6deg;
+    }
+  }
+}
+
+@media (max-width: 388px) {
+  .about {
+    .curve-image {
+      top: -59vh;
+      rotate: 6deg;
+    }
+  }
+}
+@media (max-width: 348px) {
+  .about {
+    .curve-image {
+      top: -57.5vh;
+      rotate: 6deg;
     }
   }
 }
