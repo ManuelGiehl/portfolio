@@ -3,7 +3,8 @@
     <img src="/img/feedback/greenshadow-feedback.png" alt="Green shadow" class="green-shadow-img">
   </div>
   <div class="feedback-container">
-    <div class="feedback-content">
+    <!-- Desktop Layout (1440px+) -->
+    <div class="feedback-content feedback-content-desktop">
       <div class="quote-section">
         <div class="quote-marks">
           <img src="/img/feedback/quotes.png" alt="Quote marks" class="quote-img">
@@ -27,9 +28,41 @@
         </div>
       </div>
       
-      <div class="profile-section">
+      <div class="profile-section profile-section-desktop">
         <div class="profile-image">
           <img [src]="currentFeedback.profileImage" [alt]="currentFeedback.author" class="profile-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile/Tablet Layout (1440px und kleiner) -->
+    <div class="feedback-content feedback-content-mobile">
+      <div class="profile-section profile-section-mobile">
+        <div class="profile-image">
+          <img [src]="currentFeedback.profileImage" [alt]="currentFeedback.author" class="profile-img">
+        </div>
+      </div>
+      
+      <div class="quote-section">
+        <div class="quote-marks">
+          <img src="/img/feedback/quotes.png" alt="Quote marks" class="quote-img">
+        </div>
+        
+        <div class="quote-box">
+          <div class="quote-text-container">
+            <div class="quote-text">
+              {{ currentFeedback.quote }}
+            </div>
+          </div>
+          
+          <div class="quote-author">
+            <div class="author-info">
+              <div class="author-line"></div>
+              <span class="author-name">{{ currentFeedback.author }}</span>
+              <span class="author-separator">-</span>
+              <span class="author-title">{{ currentFeedback.title }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

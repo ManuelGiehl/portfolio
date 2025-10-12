@@ -1,0 +1,187 @@
+.privacy-policy-section {
+  background-color: #141D2F;
+  position: relative;
+  z-index: 5;
+  overflow: visible;
+  min-height: 100vh;
+}
+
+.privacy-policy-container {
+  background-color: #141D2F;
+  min-height: 100vh;
+  top: 70px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 100px 2rem;
+  overflow: visible;
+}
+
+.privacy-policy-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  transform: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-header {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  background: #141D2F;
+  min-height: 120px;
+  margin-bottom: 90px;
+  z-index: 10;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #70E61C;
+  font-family: 'Poppins', sans-serif;
+  font-size: 90px;
+  font-weight: 700;
+  white-space: nowrap;
+  z-index: 15;
+  
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    background: #9747FF;
+    width: clamp(20px, 8vw, 110px);
+    max-width: calc(50vw - 40px);
+    border-radius: 2px;
+    z-index: 15;
+  }
+  
+  &::before {
+    right: calc(100% + 20px);
+  }
+  
+  &::after {
+    left: calc(100% + 20px);
+    width: 100vw;
+    pointer-events: none;
+    max-width: none;
+    z-index: 1;
+  }
+}
+
+.privacy-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: #9747FF;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.privacy-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #ABB2BF;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  text-align: left;
+  
+  .highlight {
+    color: #9747FF;
+    font-weight: 600;
+  }
+}
+
+// Responsive Design
+@media (max-width: 1000px) {
+  .privacy-content {
+    padding: 0 10px;
+  }
+  
+  .section-title {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+  
+  .privacy-text {
+    font-size: clamp(13px, 3vw, 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 40px 2rem 100px 2rem;
+    width: 100%;
+  }
+  
+  .section-header {
+    min-height: 80px;
+    
+    .title {
+      font-size: 60px;
+      
+      &::before, &::after {
+        width: clamp(40px, 8vw, 120px);
+      }
+      
+      &::after {
+        width: 100vw;
+        pointer-events: none;
+        max-width: none;
+        z-index: 1;
+      }
+    }
+  }
+  
+  .privacy-content {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-policy-container {
+    padding: 40px 1.5rem 100px 1.5rem;
+    width: 100%;
+  }
+  
+  .section-header {
+    .title {
+      font-size: clamp(40px, 10vw, 60px);
+    }
+  }
+  
+  .privacy-content {
+    padding: 0;
+  }
+  
+  .section-title {
+    font-size: clamp(18px, 6vw, 24px);
+  }
+  
+  .privacy-text {
+    font-size: clamp(12px, 4vw, 14px);
+  }
+}

@@ -7,11 +7,11 @@
   },
   "about": {
     "title": "Über mich",
-    "subtitle": "Ich bin ein Frontend-Entwickler aus München, Deutschland. Ich helfe gerne Designern und Unternehmen dabei, ihre Ideen zum Leben zu erwecken. Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Web-Entwickler fortzusetzen.",
+    "subtitle": "Ich bin ein aufstrebender Fullstack-Entwickler aus Hamburg mit einer großen Leidenschaft für die Webentwicklung. Meine Reise in die Programmierung begann mit der Faszination, wie aus Code lebendige, interaktive Anwendungen entstehen. Ich liebe es, komplexe Probleme zu lösen und dabei stets neue Technologien zu entdecken und zu meistern.",
     "cta": "Wenn du denkst, dass ich gut zu deinen Projekten passe, kontaktiere mich!",
-    "location": "Wo befindest du dich? Bist du offen für verschiedene Arbeitsweisen, wie Remote-Arbeit oder sogar Umzug?",
-    "lightbulb": "Zeige, dass du aufgeschlossen bist. Bist du begeistert davon, neue Technologien zu lernen und deine Fähigkeiten kontinuierlich zu verbessern?",
-    "puzzle": "Eine kurze Beschreibung deines Problemlösungsansatzes. Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst? Du kannst Schlüsselwörter wie: analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit einbeziehen."
+    "location": "Hamburg, Deutschland - Ich bin offen für Remote-Arbeit und schätze Flexibilität und Anpassungsfähigkeit in der Zusammenarbeit.",
+    "lightbulb": "Ich bin ständig auf der Suche nach neuen Herausforderungen und Technologien. Das Lernen ist für mich nicht nur ein Mittel zum Zweck, sondern eine echte Leidenschaft. Jeden Tag entdecke ich etwas Neues und freue mich darauf, diese Erkenntnisse in praktische Lösungen umzusetzen.",
+    "puzzle": "Mein Ansatz ist analytisch und kreativ zugleich. Ich zerlege komplexe Probleme in verständliche Teile, experimentiere mit verschiedenen Lösungsansätzen und finde dabei oft unkonventionelle Wege. Teamarbeit und der Austausch mit anderen Entwicklern bereichern meine Perspektive und führen zu besseren Ergebnissen."
   },
   "skills": {
     "title": "Skills",
@@ -19,7 +19,10 @@
     "question": "Suchst du nach",
     "questionHighlight": "einer anderen Fähigkeit?",
     "description": "Zeige Begeisterung für das Lernen neuer Technologien und Frameworks.",
-    "button": "Kontakt aufnehmen"
+    "button": "Kontakt aufnehmen",
+    "tooltip": {
+      "title": "Ich habe ein besonderes Interesse am Lernen"
+    }
   },
   "portfolio": {
     "title": "Portfolio",
@@ -76,6 +79,79 @@
   },
   "footer": {
     "legal": "Impressum",
+    "privacy": "Datenschutz",
     "copyright": "© Manuel Giehl 2025"
+  },
+  "legalNotice": {
+    "title": "Impressum",
+    "imprint": {
+      "title": "Impressum",
+      "content": "Manuel Giehl<br>Hamburg, Deutschland<br>E-Mail: manuelgiehl@gmail.com"
+    },
+    "exploring": {
+      "title": "Kontakt",
+      "content": "E-Mail: manuelgiehl@gmail.com"
+    },
+    "acceptance": {
+      "title": "Annahme der Bedingungen",
+      "content": "Durch den Zugriff auf und die Nutzung von <span class=\"highlight\">Portfolio</span> (Produkt) erkennen Sie die folgenden Geschäftsbedingungen an und stimmen ihnen zu, sowie allen Richtlinien, Leitfäden oder Änderungen daran, die Ihnen von Zeit zu Zeit vorgelegt werden können. Ich kann die Geschäftsbedingungen von Zeit zu Zeit ohne Vorankündigung aktualisieren oder ändern."
+    },
+    "scope": {
+      "title": "Umfang und Eigentum des Produkts",
+      "content": "<span class=\"highlight\">Portfolio</span> wurde als persönliches Portfolio-Projekt entwickelt. Es dient der Präsentation meiner Fähigkeiten und Projekte und ist nicht für umfangreiche kommerzielle Nutzung gedacht. Als solches kann ich keine konsistente Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Aspekte der Qualität bezüglich dieses Produkts garantieren.<br><br>Das Design und alle Inhalte von <span class=\"highlight\">Portfolio</span> gehören mir. Unbefugte Verwendung, Reproduktion, Modifikation, Verteilung oder Replikation ist strengstens untersagt."
+    },
+    "proprietary": {
+      "title": "Eigentumsrechte",
+      "content": "Ich behalte alle Eigentumsrechte an <span class=\"highlight\">Portfolio</span>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und anderen proprietären Informationen."
+    },
+    "use": {
+      "title": "Nutzung des Produkts",
+      "content": "<span class=\"highlight\">Portfolio</span> ist nur für rechtmäßige Zwecke bestimmt, in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften. Jede Verwendung von <span class=\"highlight\">Portfolio</span> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung einer anderen Person ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span class=\"highlight\">Portfolio</span>."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss und Haftungsbeschränkung",
+      "content": "<span class=\"highlight\">Portfolio</span> wird \"wie besehen\" ohne Gewährleistung jeglicher Art bereitgestellt, sei es ausdrücklich oder stillschweigend, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. In keinem Fall hafte ich für direkte, indirekte, zufällige, besondere, Folgeschäden oder beispielhafte Schäden, einschließlich, aber nicht beschränkt auf Schäden für Verluste von Gewinnen, Goodwill, Nutzung, Daten oder anderen immateriellen Verlusten, auch wenn ich auf die Möglichkeit solcher Schäden hingewiesen wurde, die sich aus oder in Verbindung mit der Nutzung oder Leistung von <span class=\"highlight\">Portfolio</span> ergeben."
+    },
+    "indemnity": {
+      "title": "Schadloshaltung",
+      "content": "Sie verpflichten sich, mich von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) zu verteidigen und schadlos zu halten, die sich aus oder in Bezug auf Ihre Nutzung von <span class=\"highlight\">Portfolio</span> und/oder Ihre Verletzung dieses Impressums ergeben."
+    },
+    "contact": "Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter manuelgiehl@gmail.com.<br>Datum: 9. Oktober 2025"
+  },
+  "privacyPolicy": {
+    "title": "Datenschutzerklärung",
+    "introduction": {
+      "title": "Einführung",
+      "content": "Diese Datenschutzerklärung beschreibt, wie ich, Manuel Giehl, Ihre persönlichen Daten sammle, verwende und schütze, wenn Sie mein <span class=\"highlight\">Portfolio</span> besuchen oder nutzen. Der Schutz Ihrer Privatsphäre ist mir wichtig."
+    },
+    "dataCollection": {
+      "title": "Datenerfassung",
+      "content": "Ich sammle nur die Daten, die für die ordnungsgemäße Funktion meines Portfolios erforderlich sind. Dies kann umfassen:<br><br>• <strong>Kontaktformular-Daten:</strong> Name, E-Mail-Adresse und Nachricht, die Sie über das Kontaktformular senden<br>• <strong>Technische Daten:</strong> IP-Adresse, Browser-Typ, Geräteinformationen und Besuchszeiten<br>• <strong>Cookies:</strong> Für die Funktionalität und Analyse der Website"
+    },
+    "dataUsage": {
+      "title": "Datenverwendung",
+      "content": "Ihre Daten werden ausschließlich für folgende Zwecke verwendet:<br><br>• <strong>Kommunikation:</strong> Beantwortung Ihrer Anfragen über das Kontaktformular<br>• <strong>Website-Funktionalität:</strong> Sicherstellung der ordnungsgemäßen Funktion der Website<br>• <strong>Verbesserung:</strong> Analyse der Website-Nutzung zur Verbesserung der Benutzererfahrung<br>• <strong>Rechtliche Verpflichtungen:</strong> Erfüllung gesetzlicher Anforderungen"
+    },
+    "dataSharing": {
+      "title": "Datenweitergabe",
+      "content": "Ich teile Ihre persönlichen Daten nicht mit Dritten, außer in folgenden Fällen:<br><br>• <strong>Ihre ausdrückliche Zustimmung</strong><br>• <strong>Rechtliche Verpflichtung:</strong> Wenn dies gesetzlich vorgeschrieben ist<br>• <strong>Schutz der Rechte:</strong> Zum Schutz meiner Rechte oder der Rechte anderer<br>• <strong>Service-Provider:</strong> Vertrauenswürdige Drittanbieter, die bei der Website-Betreuung helfen (unter strengen Datenschutzvereinbarungen)"
+    },
+    "dataSecurity": {
+      "title": "Datensicherheit",
+      "content": "Ich implementiere angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten:<br><br>• <strong>Verschlüsselung:</strong> Sichere Übertragung Ihrer Daten<br>• <strong>Zugangskontrolle:</strong> Beschränkter Zugang zu persönlichen Daten<br>• <strong>Regelmäßige Updates:</strong> Aktualisierung der Sicherheitsmaßnahmen<br>• <strong>Datensicherung:</strong> Sichere Speicherung Ihrer Daten"
+    },
+    "cookies": {
+      "title": "Cookies und Tracking",
+      "content": "Mein Portfolio verwendet Cookies für:<br><br>• <strong>Funktionalität:</strong> Sicherstellung der ordnungsgemäßen Website-Funktion<br>• <strong>Präferenzen:</strong> Speicherung Ihrer Spracheinstellungen<br>• <strong>Analyse:</strong> Verständnis der Website-Nutzung (anonymisiert)<br><br>Sie können Cookies in Ihren Browser-Einstellungen deaktivieren, dies kann jedoch die Funktionalität beeinträchtigen."
+    },
+    "userRights": {
+      "title": "Ihre Rechte",
+      "content": "Sie haben folgende Rechte bezüglich Ihrer persönlichen Daten:<br><br>• <strong>Auskunftsrecht:</strong> Information über die verarbeiteten Daten<br>• <strong>Berichtigungsrecht:</strong> Korrektur unrichtiger Daten<br>• <strong>Löschungsrecht:</strong> Löschung Ihrer Daten<br>• <strong>Widerspruchsrecht:</strong> Widerspruch gegen die Datenverarbeitung<br>• <strong>Datenübertragbarkeit:</strong> Übertragung Ihrer Daten in einem strukturierten Format<br><br>Um diese Rechte auszuüben, kontaktieren Sie mich unter manuelgiehl@gmail.com."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte kontaktieren Sie mich:<br><br><strong>E-Mail:</strong> manuelgiehl@gmail.com<br><strong>Adresse:</strong> Hamburg, Deutschland"
+    },
+    "lastUpdated": "Diese Datenschutzerklärung wurde zuletzt am 9. Oktober 2025 aktualisiert."
   }
 }

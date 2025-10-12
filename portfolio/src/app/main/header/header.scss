@@ -5,6 +5,7 @@
   height: 109.03px;
   font-family: 'Inter';
   z-index: 10000;
+  will-change: transform;
   
   .header-content {
     display: flex;
@@ -284,6 +285,11 @@
       display: flex;
     }
   }
+}
+
+// Hide Contact in desktop navigation
+.navigation .nav-link:nth-child(4) {
+  display: none;
 }
 
 .close-menu-button {

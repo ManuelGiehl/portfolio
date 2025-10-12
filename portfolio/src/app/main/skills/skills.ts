@@ -10,4 +10,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class Skills {
   private translate = inject(TranslateService);
+  
+  showTooltip = false;
+  
+  scrollToContact() {
+    const contactLink = document.querySelector('a[href="#contact"]') as HTMLElement;
+    if (contactLink) {
+      contactLink.click();
+    }
+  }
 }

@@ -17,49 +17,10 @@ export class Hero {
   protected readonly email = signal<string>('manuelgiehl@gmail.com');
   
   onCtaClick(): void {
-    this.scrollToContact();
-  }
-
-  private scrollToContact(): void {
-    const contactElement = document.querySelector('#contact') as HTMLElement;
-    if (!contactElement) return;
-
-    const targetPosition = contactElement.offsetTop - 100;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    
-    this.animateScroll(startPosition, distance);
-  }
-
-  private animateScroll(startPosition: number, distance: number): void {
-    const duration = 800;
-    let start: number | null = null;
-
-    const animate = (currentTime: number) => {
-      if (start === null) start = currentTime;
-      const timeElapsed = currentTime - start;
-      const progress = Math.min(timeElapsed / duration, 1);
-      
-      const easedProgress = this.easeInOutQuart(progress);
-      const currentPosition = startPosition + distance * easedProgress;
-      
-      this.scrollToPosition(currentPosition);
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }
-
-  private easeInOutQuart(t: number): number {
-    return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
-  }
-
-  private scrollToPosition(position: number): void {
-    window.scrollTo(0, position);
-    document.documentElement.scrollTop = position;
-    document.body.scrollTop = position;
+    // Simuliere einen Klick auf den Contact-Link im Header
+    const contactLink = document.querySelector('a[href="#contact"]') as HTMLElement;
+    if (contactLink) {
+      contactLink.click();
+    }
   }
 }

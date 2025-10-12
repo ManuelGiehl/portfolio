@@ -1,12 +1,4 @@
 <section id="portfolio" class="portfolio-section">
-  <div class="green-shadow-left">
-    <img src="/img/skills/greenshadow-skills.png" alt="Green Shadow" class="green-shadow-img">
-  </div>
-  
-  <div class="purple-shadow-left">
-    <img src="/img/portfolio/purpleshadow-portfolio.png" alt="Purple Shadow" class="purple-shadow-img">
-  </div>
-  
   <div class="portfolio-header">
     <div class="section-header">
         <h2 class="title">{{ 'portfolio.title' | translate }}</h2>
@@ -15,6 +7,13 @@
   </div>
   
   <div class="portfolio-container">
+    <div class="green-shadow-left">
+      <img src="/img/skills/greenshadow-skills.png" alt="Green Shadow" class="green-shadow-img">
+    </div>
+    
+    <div class="purple-shadow-left">
+      <img src="/img/portfolio/purpleshadow-portfolio.png" alt="Purple Shadow" class="purple-shadow-img">
+    </div>
 
     <div class="projects-container">
       @for (project of projects; track project.id; let i = $index) {

@@ -1,5 +1,16 @@
 <section id="skills" class="skills">
   <div class="skills-container">
+    <!-- Mobile Skills Text Top (über Icons) -->
+    <div class="skills-text-mobile-top">
+      <h2 class="skills-title">
+        {{ 'skills.title' | translate }}
+      </h2>
+      
+      <p class="skills-description">
+        {{ 'skills.subtitle' | translate }}
+      </p>
+    </div>
+
     <div class="skills-content">
       <div class="skills-grid">
         <div class="skill-item">
@@ -62,9 +73,24 @@
           </div>
         </div>
         
-        <div class="skill-item special">
+        <div class="skill-item special" (mouseenter)="showTooltip = true" (mouseleave)="showTooltip = false">
           <div class="skill-icon">
             <img src="img/skills/learning.png" alt="Continually learning">
+          </div>
+          <div class="tooltip" [class.show]="showTooltip">
+            <div class="tooltip-content">
+              <h4 class="tooltip-title">{{ 'skills.tooltip.title' | translate }}</h4>
+              <div class="tooltip-icons">
+                <div class="tooltip-icon">
+                  <img src="img/skills/react.png" alt="React">
+                  <span>React</span>
+                </div>
+                <div class="tooltip-icon">
+                  <img src="img/skills/vue.png" alt="Vue.js">
+                  <span>Vue.js</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,8 +113,21 @@
           {{ 'skills.description' | translate }}
         </p>
         
-        <button class="cta-button">{{ 'skills.button' | translate }}</button>
+        <button class="cta-button" (click)="scrollToContact()">{{ 'skills.button' | translate }}</button>
       </div>
+    </div>
+
+    <!-- Mobile Skills Text Bottom (unter Icons) -->
+    <div class="skills-text-mobile-bottom">
+      <h3 class="skills-question">
+        {{ 'skills.question' | translate }} <span class="highlight">{{ 'skills.questionHighlight' | translate }}</span>
+      </h3>
+      
+      <p class="skills-description">
+        {{ 'skills.description' | translate }}
+      </p>
+      
+      <button class="cta-button" (click)="scrollToContact()">{{ 'skills.button' | translate }}</button>
     </div>
   </div>
 </section>

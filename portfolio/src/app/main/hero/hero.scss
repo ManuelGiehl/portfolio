@@ -1,275 +1,238 @@
-.hero {
-  height: calc(100vh - 109.03px);
-  background-color: #141D2F;
-  padding: 0;
+.hero-container {
+  height: calc(100svh - 109.03px);
+  height: calc(100dvh - 109.03px);
+  overflow: visible;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-content-wrapper {
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+  align-items: center;
 }
+
+.hero-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 7%;
+  position: relative;
   
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 2rem;
-  }
-    
-    .hero-main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 4rem;
-      flex: 1;
-      width: 100%;
-    }
-      
-      .hero-left {
-        flex: 0 0 auto;
-        margin-left: 0;
-     
-        .profile-image {
-          position: relative;
-          width: 646px;
-          height: 705px;
-          overflow: visible;
-          top: 0;
-          left: 0;
-          
-          .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            position: relative;
-            z-index: 2;
-          }
-          
-        }
-      }
-  
-      .hero-right {
-        flex: 0 0 auto;
-        display: flex;
-        align-items: flex-start;
-        position: relative;
-        z-index: 10;
-        margin-right: 0;
-    
-        .hero-text {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 20px;
-      width: 718px;
-      height: 172px;
-      margin-left: -200px;
-      margin-bottom: 200px;
-      
-      
-        .i-am-container {
-          writing-mode: vertical-rl;
-          rotate: 180deg;
-          text-orientation: mixed;
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          width: 63px;
-          height: 152px;
-          font-family: 'Poppins', sans-serif !important;
-          font-weight: 400 !important;
-          font-size: 64px;
-          line-height: 120%;
-          letter-spacing: 0%;
-          color: #FFFFFF;
-          padding-bottom: 38px; 
-          white-space: nowrap;
-        }
-        
-  
-        .i-am-container * {
-          font-family: 'Poppins', sans-serif !important;
-          font-weight: 400 !important;
-        }
-      
-      
-      .text-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 620px;
-      }
-      
-      .hero-name {
-        width: 620px;
-        height: 108px;
-        font-size: 90px;
-        font-weight: 700;
-        font-style: bold;
-        line-height: 120%;
-        letter-spacing: 0.02em;
-        color: white;
-        margin: 0;
-        margin-top: 5px;
-        font-family: 'Poppins', sans-serif;
-        text-align: left;
-        white-space: nowrap;
-      }
-      
-      .hero-title {
-        font-size: 58px;
-        color: #9747FF;
-        margin: 0;
-        margin-top: -5px;
-        font-weight: 400;
-        font-style: regular;
-        line-height: 120%;
-        letter-spacing: 0em;
-        font-family: 'Poppins', sans-serif;
-        white-space: nowrap;
-        width: 620px;
-        text-align: left;
-      }
-      
-      .cta-button {
-        background-color: #70E61C;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 10px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: auto;
-        min-width: 165px;
-        padding: 15px 40px;
-        height: 58px;
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        align-self: center;
-        margin-top: 30px;
-        white-space: nowrap;
-        
-        &:hover {
-          background-color: #9747FF;
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-  
-  .hero-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    padding: 10px 0;
-    margin-top: auto;
+  img {
+    height: 705px;
+    width: auto;
+    object-fit: contain;
     position: relative;
-    z-index: 20;
-    
-    
-    .contact-info {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      height: 40px;
-      position: relative;
-      z-index: 25;
-      
-      .purple-line {
-        position: absolute;
-        top: 50%;
-        right: calc(100% + 20px);
-        width: calc(100vw - 100% - 20px);
-        height: 2px;
-        background-color: #9747FF;
-        border-radius: 2px;
-        transform: translateY(-50%);
-      }
-      
-      .contact-link {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        cursor: pointer;
-        position: relative;
-        z-index: 100;
-        
-        &:hover {
-          width: 36px;
-          height: 36px;
-          z-index: 100;
-        }
-        
-        .contact-icon {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          display: block;
-        }
-      }
-      
-      .email-text {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.35rem;
-        color: white;
-        width: 248px;
-        height: 28px;
-        line-height: 120%;
-        letter-spacing: 0%;
-        font-weight: 400;
-        font-style: regular;
-        
-      }
-    }
-    
-    .scroll-indicator {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform: translateY(-70%);
-      z-index: 30;
-      
-      .scroll-text {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.35rem;
-        color: white;
-        writing-mode: vertical-rl;
-        letter-spacing: 0%;
-        font-weight: 400;
-        font-style: regular;
-        
-        line-height: 1.2;
-      }
-      
-      .scroll-arrow {
-        width: 15.56px;
-        height: 16px;
-        object-fit: contain;
-      }
-    }
-    
-    }
+    z-index: 2;
+  }
+}
 
+.hero-text-container {
+  position: absolute;
+  right: 5%;
+  top: 42.5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  z-index: 10;
+}
 
+.hero-text-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
 
+.hero-text-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero-text-i-am {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: clamp(32px, 4vw, 72px);
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  text-orientation: mixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.hero-text-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: clamp(44px, 5vw, 90px);
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.hero-text-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: clamp(28px, 3.3vw, 60px);
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #9747FF;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.hero-cta-button {
+  background-color: #70E61C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 165px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
+  &:hover {
+    transform: scale(1.05);
+    background-color: #9747FF;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
 
 
+
+
+.hero-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 10px 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  flex-shrink: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 40px;
+  position: relative;
+  z-index: 25;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 20px);
+    width: 2000px;
+    height: 2px;
+    background-color: #9747FF;
+    border-radius: 2px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.contact-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  width: 32px;
+  height: 32px;
+  
+  &:hover {
+    transform: scale(1.2);
+    z-index: 100;
+  }
+  
+  .contact-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    display: block;
+  }
+}
+
+.email-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 30;
+}
+
+.scroll-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  writing-mode: vertical-rl;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.scroll-arrow {
+  width: 15.56px;
+  height: 16px;
+  object-fit: contain;
+  animation: bounce 2s infinite;
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -283,787 +246,359 @@
   }
 }
 
-// Responsive Design - ab 1300px
-@media (max-width: 1300px) {
-  .hero {
-    .hero-right .hero-text {
-      .i-am-container {
-        font-size: 50px;
-      }
-      
-      .hero-name {
-        font-size: 70px;
-        margin-top: 25px;
-      }
-      
-      .hero-title {
-        font-size: 45px;
-        margin-top: -25px;
-      }
-      
-      .cta-button {
-        font-size: 1rem;
-        height: 50px;
-        padding: 12px 30px;
-        
-        margin-left: -120px;
-      }
-    }
+// Hero Shadows
+.hero-purple-shadow {
+  position: absolute;
+  left: -5%;
+  top: 55%;
+  width: 65%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  rotate: 1deg;
+
+  .purple-shadow-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    rotate: 20deg;
   }
 }
 
-// Responsive Design - ab 1200px
-@media (max-width: 1165px) {
-  .hero {
-    .hero-right .hero-text {
-      .i-am-container {
-        font-size: 45px;
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        margin-top: 30px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        margin-top: -30px;
-      }
-      
-      .cta-button {
-        font-size: 1rem;
-        height: 50px;
-        padding: 10px 25px;
-        margin-left: -200px;
-      }
-    }
+.hero-green-shadow {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  width: 85%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+
+  .green-shadow-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+//MEDIA QUERIES 
+
+@media (min-width: 3840px) {
+  .hero-image {
+    padding-bottom: 38.5%;
+  }
+}
+@media (max-width: 1440px) {
+  .hero-image {
+    padding-bottom: 7%;
   }
 }
 
-// Responsive Design - ab 1070px
-@media (max-width: 1070px) {
-  .hero {
-    .hero-right .hero-text {
-      gap: 0px;
-      
-      .i-am-container {
-        font-size: 45px;
-      
-        
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        margin-top: 32px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        margin-top: -34px;
-      }
-      
-      .cta-button {
-        font-size: 1rem;
-        height: 56px;
-        padding: 8px 20px;
-        margin-left: -230px;
-      }
-    }
+@media (max-width: 1439px) {
+  .hero-image {
+    padding-bottom: 2%;
   }
 }
 
-// Responsive Design - ab 1040px
-@media (max-width: 1040px) {
-  .hero {
-    .hero-left .profile-image {
-      width: 600px;
-      height: 650px;
-    }
-    
-    .hero-right .hero-text {
-      gap: 0px;
-      
-      .i-am-container {
-        font-size: 45px;
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        margin-top: 32px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        margin-top: -34px;
-      }
-      
-      .cta-button {
-        font-size: 1rem;
-        height: 56px;
-        padding: 8px 20px;
-        margin-left: -230px;
-      }
-    }
+@media (max-width: 1420px) {
+  .hero-image {
+    padding-bottom: 5%;
   }
 }
 
-// Responsive Design - ab 1000px (Tablet/Mobile Layout)
+@media (max-width: 1368px) {
+  .hero-image {
+    padding-bottom: 7%;
+  }
+}
+
+@media (max-width: 1328px) {
+  .hero-image {
+    padding-bottom: 9%;
+  }
+}
+
+@media (max-width: 1290px) {
+  .hero-image {
+    padding-bottom: 11%;
+  }
+}
+
+  @media (max-width: 1245px) {
+    .hero-image {
+      padding-bottom: 13%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .hero-image {
+      padding-bottom: 11%;
+    }
+  }
+
+  @media (max-width: 1165px) {
+    .hero-image {
+      padding-bottom: 13%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-image {
+      padding-bottom: 10%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .hero-image {
+      padding-bottom: 24%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-image {
+      padding-bottom: 22%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hero-image {
+      padding-bottom: 20.8%;
+    }
+  }
+
+  @media (max-width: 743px) {
+    .hero-image {
+      padding-bottom: 18%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .hero-image {
+      padding-bottom: 21%;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .hero-image {
+      padding-bottom: 19%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-image {
+      padding-bottom: 23%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .hero-image {
+      padding-bottom: 60%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .hero-image {
+      padding-bottom: 80%;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero-image {
+      padding-bottom: 90%;
+    }
+  }
+
+  @media (max-width: 365px) {
+    .hero-image {
+      padding-bottom: 90%;
+    }
+  }
+
+
+  @media (min-height: 1024px) {
+    .hero-image {
+      padding-bottom: 25%;
+  }
+}
+
+  @media (min-height: 1160px) {
+    .hero-image {
+      padding-bottom: 33%;
+  }
+}
+
+@media (min-height: 1366px) {
+  .hero-image {
+    padding-bottom: 24%;
+}
+}
+
+@media (min-height: 2140px) {
+  .hero-image {
+    padding-bottom: 38%;
+}
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-
-      gap: 2rem;
-      padding: 0 20px;
-    }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-    
-    .hero-left .profile-image {
-      width: 550px;
-      height: 600px;
-      order: 1;
-    }
-    
-     .hero-right .hero-text {
-       position: relative;
-       margin-left: -80px;
-       margin-top: -40px;
-       width: 100%;
-       max-width: 400px;
-       justify-content: center;
-       align-items: center;
-      
-      .i-am-container {
-        font-size: 36px;
-        width: 40px;
-        height: 80px;
-        position: absolute;
-        left: -50px;
-        top: -18px;
-      }
-      
-      .text-content {
-        width: 100%;
-        max-width: 350px;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        width: 100%;
-        text-align: center;
-        margin-top: -20px;
-        margin-right: 0px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        width: 100%;
-        text-align: center;
-        margin-top: -50px;
-        
-      }
-      
-      .cta-button {
-        font-size: 0.9rem;
-        height: 45px;
-        padding: 10px 25px;
-        margin-left: 150px;
-        top: 40px;
-      }
-    }
-    
-    .hero-footer {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    
-    .contact-info {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 100;
-      bottom: 220px;
-      
-     
-      
-      .email-text {
-        display: none;
-      }
-    }
+  .hero-purple-shadow {
+    top: 40%;
   }
-}
 
-@media (max-width: 550px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-
-      gap: 2rem;
-      padding: 0 20px;
-    }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero-left .profile-image {
-      width: 500px;
-      height: 550px;
-      order: 1;
-
-      .profile-img {
-        object-fit:contain; 
-      }
-    }
-
-    
-     .hero-right .hero-text {
-       position: relative;
-       margin-left: -35px;
-       margin-top: -20px;
-       width: 100%;
-       max-width: 400px;
-       justify-content: center;
-       align-items: center;
-      
-      .i-am-container {
-        font-size: 36px;
-        width: 40px;
-        height: 80px;
-        position: absolute;
-        left: -50px;
-        top: -18px;
-      }
-      
-      .text-content {
-        width: 100%;
-        max-width: 350px;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        width: 100%;
-        text-align: center;
-        margin-top: -20px;
-        margin-right: 0px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        width: 100%;
-        text-align: center;
-        margin-top: -50px;
-        
-      }
-      
-      .cta-button {
-        font-size: 0.9rem;
-        height: 45px;
-        padding: 10px 25px;
-        margin-left: 110px;
-    
-      }
-    }
-    
-    .hero-footer {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    
-    .contact-info {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 100;
-      
-      
-      
-      .email-text {
-        display: none;
-      }
-    }
+  .hero-green-shadow {
+    top: 35%;
   }
-}
 
-@media (max-width: 450px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-
-      gap: 2rem;
-      padding: 0 20px;
+  @media (max-width: 800px) {
+    .hero-purple-shadow {
+      top: 42%;
     }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero-left .profile-image {
-      width: 450px;
-      height: 550px;
-      order: 1;
-
-      .profile-img {
-        object-fit:contain; 
-      }
-    }
-
-    
-     .hero-right .hero-text {
-       position: relative;
-       margin-left: -80px;
-       margin-top: -20px;
-       width: 100%;
-       max-width: 400px;
-       justify-content: center;
-       align-items: center;
-     }
+  
+    .hero-green-shadow {
+      top: 40%;
     }
   }
 
   @media (max-width: 550px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
+    .hero-purple-shadow {
+      top: 32%;
+    }
+  
+    .hero-green-shadow {
+      top: 33%;
+    }
+  }
 
-      gap: 2rem;
-      padding: 0 20px;
-    }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
+  @media (max-width: 390px) {
+    .hero-purple-shadow {
+      top: 35%;
 
-    .hero-left .profile-image {
-      width: 500px;
-      height: 550px;
-      order: 1;
+    }
+  
+    .hero-green-shadow {
+      top: 34%;
+      left: 29%;
+    }
+  }
 
-      .profile-img {
-        object-fit:contain; 
-      }
+  .hero-container {
+    justify-content: center;
+  }
+  
+  .hero-content-wrapper {
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero-image {
+    justify-content: center;
+    
+    img {
+      height: clamp(447px, 705px - (1366px - 100vw) * 0.4, 705px);
     }
+  }
+  
+  .hero-text-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .hero-text-i-am {
+    font-size: clamp(28px, 4.1vw, 44px);
+  }
+  
+  .hero-text-name {
+    font-size: clamp(33px, 5.4vw, 72px);
+  }
+  
+  .hero-text-title {
+    font-size: clamp(22px, 3.6vw, 60px);
+  }
+  
+  .hero-cta-button {
+    padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
+    font-size: clamp(14px, 2.5vw, 20px);
+    width: clamp(120px, 20vw, 150px);
+    height: clamp(40px, 6vw, 55px);
+  }
+  
+  .hero-footer {
+    justify-content: center;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .email-text {
+    display: none;
+  }
+}
 
+@media (max-width: 550px) {
+  .hero-image {
+    padding-bottom: 52%;
     
-     .hero-right .hero-text {
-       position: relative;
-       margin-left: -35px;
-       margin-top: -20px;
-       width: 100%;
-       max-width: 400px;
-       justify-content: center;
-       align-items: center;
-      
-      .i-am-container {
-        font-size: 36px;
-        width: 40px;
-        height: 80px;
-        position: absolute;
-        left: -50px;
-        top: -18px;
-      }
-      
-      .text-content {
-        width: 100%;
-        max-width: 350px;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .hero-name {
-        font-size: 60px;
-        width: 100%;
-        text-align: center;
-        margin-top: -20px;
-        margin-right: 0px;
-      }
-      
-      .hero-title {
-        font-size: 38.5px;
-        width: 100%;
-        text-align: center;
-        margin-top: -50px;
-        
-      }
-      
-      .cta-button {
-        font-size: 0.9rem;
-        height: 45px;
-        padding: 10px 25px;
-        margin-right: 50px;
-      }
-    }
-    
-    .hero-footer {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    
-    .contact-info {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 100;
-      
-      .contact-link {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        cursor: pointer;
-        position: relative;
-        z-index: 100;
-        
-        &:hover {
-          width: 36px;
-          height: 36px;
-          z-index: 100;
-        }
-        
-        .contact-icon {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          display: block;
-        }
-      }
-      
-      .email-text {
-        display: none;
-      }
+    img {
+      height: clamp(300px, 90vw, 400px);
     }
   }
 }
 
-@media (max-width: 490px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-
-      gap: 2rem;
-      padding: 0 20px;
-    }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero-left .profile-image {
-      width: 500px;
-      height: 550px;
-      order: 1;
-
-      .profile-img {
-        object-fit:contain; 
-      }
-    }
-
-    
-     .hero-right .hero-text {
-       position: relative;
-       margin-left: -35px;
-       margin-top: -20px;
-       width: 100%;
-       max-width: 400px;
-       justify-content: center;
-       align-items: center;
-      
-      .i-am-container {
-        font-size: 35px;
-        width: 40px;
-        height: 80px;
-        position: absolute;
-        left: -20px;
-        top: -20px;
-        margin-left: 20px;
-      }
-      
-      .text-content {
-        width: 100%;
-        max-width: 350px;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-      }
-      
-      .hero-name {
-        font-size: 44px;
-        width: 100%;
-        text-align: center;
-        margin-top: -20px;
-        margin-left: 40px;
-      }
-      
-      .hero-title {
-        font-size: 28.5px;
-        width: 100%;
-        text-align: center;
-        margin-top: -50px;
-        margin-left: 40px;
-        
-      }
-      
-      .cta-button {
-        font-size: 16px;
-        height: 45px;
-        padding: 10px 25px;
-        margin-right: 80px;
-      }
-    }
-    
-    .hero-footer {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-    }
-    
-    .contact-info {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 100;
-      
-      .contact-link {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        cursor: pointer;
-        position: relative;
-        z-index: 100;
-        
-        &:hover {
-          width: 36px;
-          height: 36px;
-          z-index: 100;
-        }
-        
-        .contact-icon {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          display: block;
-        }
-      }
-      
-      .email-text {
-        display: none;
-      }
-    }
+@media (min-height: 2160px) {
+  .hero-text-container {
+    top: 35%;
   }
 }
 
-@media (max-width: 435px) {
-  .hero {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
+@media (max-width: 575px) {
+  .hero-text-container {
+    top: 65%;
+    gap: 10px;
+  }
+  
+  .hero-text-i-am {
+    font-size: clamp(28px, 6vw, 60px);
+  }
+  
+  .hero-text-name {
+    font-size: clamp(36px, 7.8vw, 80px);
+  }
+  
+  .hero-text-title {
+    font-size: clamp(24px, 5.2vw, 60px);
+  }
+  
+  .hero-cta-button {
+    padding: clamp(10px, 2vw, 12px) clamp(18px, 3.5vw, 24px);
+    font-size: clamp(16px, 3vw, 20px);
+    width: clamp(130px, 22vw, 150px);
+    height: clamp(45px, 7vw, 55px);
+  }
+  
+  .hero-footer {
+    justify-content: center;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .email-text {
+    display: none;
+  }
+}
 
-      gap: 2rem;
-      padding: 0 20px;
-    }
-    
-    .hero-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
 
-    .hero-left .profile-image {
-      width: 450px;
-      height: 550px;
-      order: 1;
 
-      .profile-img {
-        object-fit:contain; 
-      }
-    }}}
 
-    @media (max-width: 388px) {
-      .hero {
-        .hero-content {
-          flex-direction: column;
-          align-items: center;
-    
-          gap: 2rem;
-          padding: 0 20px;
-        }
-        
-        .hero-main {
-          flex-direction: column;
-          align-items: center;
-          gap: 2rem;
-        }
-    
-        .hero-left .profile-image {
-          width: 400px;
-          height: 550px;
-          order: 1;
-    
-          .profile-img {
-            object-fit:contain; 
-          }
-        }}}
-    
-        @media (max-width: 404px) {
-          .hero {
-
-             .hero-right .hero-text {
-               position: relative;
-               margin-left: -35px;
-               margin-top: -20px;
-               width: 100%;
-               max-width: 400px;
-               justify-content: center;
-               align-items: center;
-              
-              .i-am-container {
-                font-size: 35px;
-                width: 40px;
-                height: 80px;
-                position: absolute;
-                left: -20px;
-                top: -20px;
-                margin-left: 40px;
-              }
-              
-              .text-content {
-                width: 100%;
-                max-width: 350px;
-                align-items: center;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                margin-left: 40px;
-              }
-              
-              .hero-name {
-                font-size: 44px;
-                width: 100%;
-                text-align: center;
-                margin-top: -20px;
-                margin-left: 40px;
-              }
-              
-              .hero-title {
-                font-size: 28.5px;
-                width: 100%;
-                text-align: center;
-                margin-top: -50px;
-                margin-left: 40px;
-                
-              }
-              
-              .cta-button {
-                font-size: 16px;
-                height: 45px;
-                padding: 10px 25px;
-                margin-right: 90px;
-              }
-            }}}
-
-            @media (max-width: 378px) {
-              .hero {
-    
-                 .hero-right .hero-text {
-                   position: relative;
-                   margin-left: -35px;
-                   margin-top: -20px;
-                   width: 100%;
-                   max-width: 400px;
-                   justify-content: center;
-                   align-items: center;
-                  
-                  .i-am-container {
-                    font-size: 31px;
-                    width: 40px;
-                    height: 80px;
-                    position: absolute;
-                    left: -20px;
-                    top: -20px;
-                    margin-left: 60px;
-                  }
-                  
-                  .text-content {
-                    width: 100%;
-                    max-width: 350px;
-                    align-items: center;
-                    text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 40px;
-                  }
-                  
-                  .hero-name {
-                    font-size: 38px;
-                    width: 100%;
-                    text-align: center;
-                    margin-top: -20px;
-                    margin-left: 40px;
-                  }
-                  
-                  .hero-title {
-                    font-size: 24.5px;
-                    width: 100%;
-                    text-align: center;
-                    margin-top: -55px;
-                    margin-left: 40px;
-                    
-                  }
-                  
-                  .cta-button {
-                    font-size: 16px;
-                    height: 45px;
-                    padding: 10px 25px;
-                    margin-right: 100px;
-                  }
-                }}}

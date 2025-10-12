@@ -7,11 +7,11 @@
   },
   "about": {
     "title": "About me",
-    "subtitle": "I'm a Frontend developer based in Munich, Germany. I enjoy helping designers and companies bring their ideas to real life. I am looking forward to continuing my developer career with a job in a web developer position.",
+    "subtitle": "I'm an aspiring Fullstack Developer from Hamburg with a great passion for web development. My journey into programming began with the fascination of how code transforms into living, interactive applications. I love solving complex problems while constantly discovering and mastering new technologies.",
     "cta": "If you think I'd be a good match for your projects, contact me!",
-    "location": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
-    "lightbulb": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
-    "puzzle": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration."
+    "location": "Hamburg, Germany - I'm open to remote work and value flexibility and adaptability in collaboration.",
+    "lightbulb": "I'm constantly seeking new challenges and technologies. Learning for me is not just a means to an end, but a true passion. Every day I discover something new and look forward to turning these insights into practical solutions.",
+    "puzzle": "My approach is both analytical and creative. I break down complex problems into understandable parts, experiment with different solution approaches, and often find unconventional paths. Teamwork and exchange with other developers enrich my perspective and lead to better results."
   },
   "skills": {
     "title": "Skills",
@@ -19,7 +19,10 @@
     "question": "Looking for",
     "questionHighlight": "another skill?",
     "description": "Reveal enthusiasm for learning new technologies and frameworks.",
-    "button": "Get in touch"
+    "button": "Get in touch",
+    "tooltip": {
+      "title": "I have a special interest in learning"
+    }
   },
   "portfolio": {
     "title": "Portfolio",
@@ -76,6 +79,79 @@
   },
   "footer": {
     "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
     "copyright": "© Manuel Giehl 2025"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "imprint": {
+      "title": "Imprint",
+      "content": "Manuel Giehl<br>Hamburg, Germany<br>Email: manuelgiehl@gmail.com"
+    },
+    "exploring": {
+      "title": "Contact",
+      "content": "Email: manuelgiehl@gmail.com"
+    },
+    "acceptance": {
+      "title": "Acceptance of terms",
+      "content": "By accessing and using <span class=\"highlight\">Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. I may update or change the terms and conditions from time to time without notice."
+    },
+    "scope": {
+      "title": "Scope and ownership of the product",
+      "content": "<span class=\"highlight\">Portfolio</span> has been developed as a personal portfolio project. It serves to showcase my skills and projects and is not intended for extensive commercial usage. As such, I cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.<br><br>The design and all content of <span class=\"highlight\">Portfolio</span> belongs to me. Unauthorized use, reproduction, modification, distribution, or replication is strictly prohibited."
+    },
+    "proprietary": {
+      "title": "Proprietary rights",
+      "content": "I retain all proprietary rights in <span class=\"highlight\">Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information."
+    },
+    "use": {
+      "title": "Use of the product",
+      "content": "<span class=\"highlight\">Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <span class=\"highlight\">Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <span class=\"highlight\">Portfolio</span>."
+    },
+    "disclaimer": {
+      "title": "Disclaimer of warranties and limitation of liability",
+      "content": "<span class=\"highlight\">Portfolio</span> is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will I be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if I have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <span class=\"highlight\">Portfolio</span>."
+    },
+    "indemnity": {
+      "title": "Indemnity",
+      "content": "You agree to indemnify, defend and hold harmless me from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span class=\"highlight\">Portfolio</span> and/or your breach of this Legal Notice."
+    },
+    "contact": "For any questions or notices, please contact us at manuelgiehl@gmail.com.<br>Date: October 9, 2025"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "introduction": {
+      "title": "Introduction",
+      "content": "This privacy policy describes how I, Manuel Giehl, collect, use, and protect your personal data when you visit or use my <span class=\"highlight\">Portfolio</span>. Protecting your privacy is important to me."
+    },
+    "dataCollection": {
+      "title": "Data Collection",
+      "content": "I only collect data that is necessary for the proper functioning of my portfolio. This may include:<br><br>• <strong>Contact Form Data:</strong> Name, email address, and message you send through the contact form<br>• <strong>Technical Data:</strong> IP address, browser type, device information, and visit times<br>• <strong>Cookies:</strong> For website functionality and analysis"
+    },
+    "dataUsage": {
+      "title": "Data Usage",
+      "content": "Your data is used exclusively for the following purposes:<br><br>• <strong>Communication:</strong> Responding to your inquiries through the contact form<br>• <strong>Website Functionality:</strong> Ensuring proper website operation<br>• <strong>Improvement:</strong> Analyzing website usage to improve user experience<br>• <strong>Legal Obligations:</strong> Fulfilling legal requirements"
+    },
+    "dataSharing": {
+      "title": "Data Sharing",
+      "content": "I do not share your personal data with third parties, except in the following cases:<br><br>• <strong>Your explicit consent</strong><br>• <strong>Legal obligation:</strong> When required by law<br>• <strong>Rights protection:</strong> To protect my rights or the rights of others<br>• <strong>Service providers:</strong> Trusted third parties who help with website maintenance (under strict data protection agreements)"
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "I implement appropriate technical and organizational measures to protect your data:<br><br>• <strong>Encryption:</strong> Secure transmission of your data<br>• <strong>Access control:</strong> Restricted access to personal data<br>• <strong>Regular updates:</strong> Updating security measures<br>• <strong>Data backup:</strong> Secure storage of your data"
+    },
+    "cookies": {
+      "title": "Cookies and Tracking",
+      "content": "My portfolio uses cookies for:<br><br>• <strong>Functionality:</strong> Ensuring proper website function<br>• <strong>Preferences:</strong> Storing your language settings<br>• <strong>Analysis:</strong> Understanding website usage (anonymized)<br><br>You can disable cookies in your browser settings, but this may affect functionality."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "You have the following rights regarding your personal data:<br><br>• <strong>Right to information:</strong> Information about processed data<br>• <strong>Right to rectification:</strong> Correction of incorrect data<br>• <strong>Right to erasure:</strong> Deletion of your data<br>• <strong>Right to object:</strong> Objection to data processing<br>• <strong>Data portability:</strong> Transfer of your data in a structured format<br><br>To exercise these rights, contact me at manuelgiehl@gmail.com."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about this privacy policy or to exercise your rights, contact me:<br><br><strong>Email:</strong> manuelgiehl@gmail.com<br><strong>Address:</strong> Hamburg, Germany"
+    },
+    "lastUpdated": "This privacy policy was last updated on October 9, 2025."
   }
 }
