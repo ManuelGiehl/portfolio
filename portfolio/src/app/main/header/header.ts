@@ -73,30 +73,24 @@ export class Header implements OnInit {
   scrollToSection(event: Event, href: string) {
     event.preventDefault();
     
-    // Check if we're on the homepage
     if (this.router.url === '/' || this.router.url === '') {
       this.setActiveTab(href);
-      this.startSmoothScroll(href, false); // false = from homepage
-    } else {
-      // Navigate to homepage with hash
+      this.startSmoothScroll(href, false); 
+    } else {  
       this.router.navigate(['/'], { fragment: href.substring(1) }).then(() => {
-        // After navigation, scroll to the section
         setTimeout(() => {
           this.setActiveTab(href);
-          this.startSmoothScroll(href, true); // true = from other page
+          this.startSmoothScroll(href, true);
         }, 200);
       });
     }
   }
 
   scrollToHero(): void {
-    // Check if we're on the homepage
     if (this.router.url === '/' || this.router.url === '') {
       this.scrollToTop();
     } else {
-      // Navigate to homepage
       this.router.navigate(['/']).then(() => {
-        // After navigation, scroll to top
         setTimeout(() => {
           this.scrollToTop();
         }, 100);
@@ -138,7 +132,6 @@ export class Header implements OnInit {
   private calculateTargetPosition(element: HTMLElement, href: string, fromOtherPage: boolean = false): number {
     let targetPosition = element.offsetTop;
     
-    // Get header height for proper offset calculation
     const header = document.querySelector('.header') as HTMLElement;
     const headerHeight = header ? header.offsetHeight : 0;
     

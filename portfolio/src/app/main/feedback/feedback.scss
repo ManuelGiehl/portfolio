@@ -264,7 +264,6 @@
   }
 }
 
-// Desktop Layout (1440px+)
 .feedback-content-desktop {
   display: flex;
   align-items: center;
@@ -278,7 +277,6 @@
   display: none;
 }
 
-// Desktop Layout - IMMER anzeigen
 .feedback-content-desktop {
   display: flex;
 }
@@ -287,7 +285,7 @@
   display: none;
 }
 
-// Responsive Anpassungen für Desktop-Layout
+
 @media (max-width: 768px) {
   .feedback-container {
     padding: 0 0.5rem;

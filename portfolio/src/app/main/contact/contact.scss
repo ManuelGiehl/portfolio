@@ -171,7 +171,6 @@
     border-color: #70E61C;
   }
   
-  // Webkit autofill styling
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
@@ -318,7 +317,6 @@
   }
 }
 
-// Responsive Design
 @media (max-width: 768px) {
   .contact-header {
     .contact-title-container {

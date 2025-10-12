@@ -17,7 +17,6 @@ export class Hero {
   protected readonly email = signal<string>('manuelgiehl@gmail.com');
   
   onCtaClick(): void {
-    // Simuliere einen Klick auf den Contact-Link im Header
     const contactLink = document.querySelector('a[href="#contact"]') as HTMLElement;
     if (contactLink) {
       contactLink.click();
