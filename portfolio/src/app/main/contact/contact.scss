@@ -1,10 +1,9 @@
 .contact-section {
   background-color: #141D2F;
-  padding: 30px 0 20px 0;
+  padding: 100px 0px;;
   position: relative;
   z-index: 5;
   overflow: hidden;
-  min-height: 30vh;
 }
 
 .purple-shadow-container {
@@ -39,7 +38,6 @@
   
   &:last-child {
     position: relative;
-    min-height: 200px;
   }
 }
 
@@ -83,7 +81,6 @@
   display: flex;
   align-items: flex-start;
   gap: 4rem;
-  min-height: 60vh;
 }
 
 .contact-left {
@@ -129,6 +126,7 @@
 .contact-right {
   flex: 1;
   max-width: 100%;
+  width: 100%;
 }
 
 .contact-form {
@@ -290,7 +288,7 @@
 
 .scroll-to-top {
   position: absolute;
-  bottom: 8rem;
+  bottom: -4rem;
   right: 2rem;
   width: 40px;
   height: 40px;
@@ -314,6 +312,48 @@
     transform: translateY(-2px);
     background-color: #70E61C;
     border-radius: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .contact-section {
+    padding: 80px 0;
+  }
+  
+  .contact-content {
+    gap: 3rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .contact-section {
+    padding: 70px 0;
+  }
+  
+  .contact-content {
+    gap: 2.5rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-content {
+    gap: 2rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 2rem;
   }
 }
 
@@ -378,14 +418,14 @@
   }
   
   .scroll-to-top {
-    bottom: 1rem;
+    bottom: -3rem;
     right: 1rem;
     width: 45px;
     height: 45px;
   }
   
   .contact-container:last-child {
-    min-height: 150px;
+    min-height: auto;
   }
 }
 

@@ -57,12 +57,12 @@
     display: flex;
     align-items: flex-start;
     gap: clamp(2rem, 20vw, 380px);    
-    padding: clamp(30px, 5vw, 60px) 0;
     border-radius: 8px;
     position: relative;
     z-index: 30;
     width: 100%;
     max-width: 100%;
+    padding-top: 100px;
   }
   
   .about-text {
@@ -178,10 +178,27 @@
 @media (min-width: 1440px) {
   .about {
     .curve-image {
-      top: -68vh;
+      top: -70vh;
     }
   }
 }
+
+@media (max-width: 1440px) and (min-width: 1320px) {
+  .about {
+    .curve-image {
+      top: -68vh;
+      rotate: 3deg;
+    }
+  }
+}
+
+@media (max-height: 975px) {
+  .about .curve-image {
+    top: -75vh;
+  }
+}
+
+
 
 @media (max-width: 1200px) {
   .about {
@@ -216,13 +233,32 @@
     
     .about-text {
       text-align: left;
+      max-width: 100%;
+      width: 100%;
+      
+      .about-title {
+        text-align: center;
+      }
+      
+      .about-description {
+        max-width: 100%;
+        width: 100%;
+      }
       
       .about-points {
         align-items: flex-start;
+        width: 100%;
         
         .about-point {
           justify-content: flex-start;
           text-align: left;
+          width: 100%;
+          max-width: 100%;
+          
+          .feature-text {
+            max-width: 100%;
+            width: 100%;
+          }
         }
       }
     }
@@ -236,6 +272,34 @@
       top: -68vh;
       rotate: 4deg;
     }
+    
+    .about-text {
+      max-width: 100%;
+      width: 100%;
+      
+      .about-title {
+        text-align: center;
+      }
+      
+      .about-description {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      .about-points {
+        width: 100%;
+        
+        .about-point {
+          width: 100%;
+          max-width: 100%;
+          
+          .feature-text {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -244,6 +308,34 @@
     .curve-image {
       top: -64vh;
       rotate: 4deg;
+    }
+    
+    .about-text {
+      max-width: 100%;
+      width: 100%;
+      
+      .about-title {
+        text-align: center;
+      }
+      
+      .about-description {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      .about-points {
+        width: 100%;
+        
+        .about-point {
+          width: 100%;
+          max-width: 100%;
+          
+          .feature-text {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
@@ -341,7 +433,7 @@
 @media (max-width: 350px) {
   .about {
     .curve-image {
-      top: -58.3vh;
+      top: -62vh;
       rotate: 4deg;
     }
   }

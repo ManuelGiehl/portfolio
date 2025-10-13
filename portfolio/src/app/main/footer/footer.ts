@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -11,9 +11,26 @@ import { RouterModule } from '@angular/router';
 })
 export class Footer {
   private translate = inject(TranslateService);
+  private router = inject(Router);
 
   scrollToHero(): void {
     this.scrollToTop();
+  }
+
+  navigateToLegalNotice(): void {
+    this.router.navigate(['/legal-notice']).then(() => {
+      setTimeout(() => {
+        this.scrollToTop();
+      }, 100);
+    });
+  }
+
+  navigateToPrivacyPolicy(): void {
+    this.router.navigate(['/privacy-policy']).then(() => {
+      setTimeout(() => {
+        this.scrollToTop();
+      }, 100);
+    });
   }
 
   private scrollToTop(): void {

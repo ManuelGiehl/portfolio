@@ -23,8 +23,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-bottom: 7%;
   position: relative;
+  top: 42%;
+  transform: translateY(-50%);
   
   img {
     height: 705px;
@@ -266,7 +267,7 @@
 
 .hero-green-shadow {
   position: absolute;
-  right: -10%;
+  right: -20%;
   top: 50%;
   width: 85%;
   transform: translateY(-50%);
@@ -281,158 +282,208 @@
 }
 
 @media (min-width: 3840px) {
+  .hero-purple-shadow {
+    top: 48%;
+  }
+  
+  .hero-green-shadow {
+    top: 43%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-purple-shadow {
+    top: 50%;
+  }
+  
+  .hero-green-shadow {
+    top: 45%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-purple-shadow {
+    top: 52%;
+  }
+  
+  .hero-green-shadow {
+    top: 47%;
+  }
+}
+
+@media (min-width: 3840px) {
   .hero-image {
-    padding-bottom: 38.5%;
+    top: 38%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-image {
+    top: 39%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-image {
+    top: 40%;
   }
 }
 @media (max-width: 1440px) {
   .hero-image {
-    padding-bottom: 7%;
+    top: 42%;
   }
 }
 
 @media (max-width: 1439px) {
   .hero-image {
-    padding-bottom: 2%;
+    top: 42%;
   }
 }
 
 @media (max-width: 1420px) {
   .hero-image {
-    padding-bottom: 5%;
+    top: 42%;
   }
 }
 
 @media (max-width: 1368px) {
   .hero-image {
-    padding-bottom: 7%;
+    top: 42%;
   }
 }
 
 @media (max-width: 1328px) {
   .hero-image {
-    padding-bottom: 9%;
+    top: 42%;
   }
 }
 
 @media (max-width: 1290px) {
   .hero-image {
-    padding-bottom: 11%;
+    top: 42%;
   }
 }
 
   @media (max-width: 1245px) {
     .hero-image {
-      padding-bottom: 13%;
+      top: 42%;
     }
   }
 
   @media (max-width: 1200px) {
     .hero-image {
-      padding-bottom: 11%;
+      top: 42%;
     }
   }
 
   @media (max-width: 1165px) {
     .hero-image {
-      padding-bottom: 13%;
+      top: 42%;
     }
   }
 
   @media (max-width: 1024px) {
     .hero-image {
-      padding-bottom: 10%;
+      top: 42%;
     }
   }
 
+
   @media (max-width: 1000px) {
     .hero-image {
-      padding-bottom: 24%;
+      top: 42%;
     }
   }
 
   @media (max-width: 900px) {
     .hero-image {
-      padding-bottom: 22%;
+      top: 42%;
     }
   }
 
   @media (max-width: 800px) {
     .hero-image {
-      padding-bottom: 20.8%;
+      top: 42%;
     }
   }
 
   @media (max-width: 743px) {
     .hero-image {
-      padding-bottom: 18%;
+      top: 42%;
     }
   }
 
   @media (max-width: 700px) {
     .hero-image {
-      padding-bottom: 21%;
+      top: 42%;
     }
   }
 
   @media (max-width: 670px) {
     .hero-image {
-      padding-bottom: 19%;
+      top: 42%;
     }
   }
 
   @media (max-width: 640px) {
     .hero-image {
-      padding-bottom: 23%;
+      top: 42%;
     }
   }
 
   @media (max-width: 575px) {
     .hero-image {
-      padding-bottom: 60%;
+      top: 38%;
     }
   }
 
   @media (max-width: 500px) {
     .hero-image {
-      padding-bottom: 80%;
+      top: 38%;
     }
   }
 
   @media (max-width: 420px) {
     .hero-image {
-      padding-bottom: 90%;
+      top: 38%;
     }
   }
 
   @media (max-width: 365px) {
     .hero-image {
-      padding-bottom: 90%;
+      top: 38%;
     }
   }
 
 
   @media (min-height: 1024px) {
     .hero-image {
-      padding-bottom: 25%;
+      top: 42%;
   }
 }
 
   @media (min-height: 1160px) {
     .hero-image {
-      padding-bottom: 33%;
+      top: 42%;
   }
 }
 
-@media (min-height: 1366px) {
+
+@media (min-height: 1340px) {
   .hero-image {
-    padding-bottom: 24%;
+    top: 40%;
+}
+}
+
+@media (min-height: 1450px) {
+  .hero-image {
+    top: 39%;
 }
 }
 
 @media (min-height: 2140px) {
   .hero-image {
-    padding-bottom: 38%;
+    top: 38%;
 }
 }
 
@@ -446,42 +497,56 @@
 
 @media (max-width: 1000px) {
   .hero-purple-shadow {
-    top: 40%;
+    top: 50%;
   }
 
   .hero-green-shadow {
-    top: 35%;
+    top: 45%;
+    right: -17%;
   }
 
   @media (max-width: 800px) {
     .hero-purple-shadow {
-      top: 42%;
+      top: 52%;
     }
   
     .hero-green-shadow {
-      top: 40%;
+      top: 50%;
+      right: -20%;
     }
   }
 
   @media (max-width: 550px) {
     .hero-purple-shadow {
-      top: 32%;
+      top: 47%;
     }
   
     .hero-green-shadow {
-      top: 33%;
+      top: 48%;
+      right: -18%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .hero-purple-shadow {
+      top: 48%;
+    }
+  
+    .hero-green-shadow {
+      top: 49%;
+      right: -20%;
     }
   }
 
   @media (max-width: 390px) {
     .hero-purple-shadow {
-      top: 35%;
+      top: 50%;
 
     }
   
     .hero-green-shadow {
-      top: 34%;
-      left: 29%;
+      top: 49%;
+      right: -18%;
     }
   }
 
@@ -545,7 +610,7 @@
 
 @media (max-width: 550px) {
   .hero-image {
-    padding-bottom: 52%;
+    top: 35%;
     
     img {
       height: clamp(300px, 90vw, 400px);

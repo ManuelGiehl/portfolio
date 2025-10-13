@@ -130,44 +130,26 @@ export class Header implements OnInit {
   }
 
   private calculateTargetPosition(element: HTMLElement, href: string, fromOtherPage: boolean = false): number {
-    let targetPosition = element.offsetTop;
-    
     const header = document.querySelector('.header') as HTMLElement;
     const headerHeight = header ? header.offsetHeight : 0;
     
-    if (href === '#about') {
-      if (fromOtherPage) {
-        targetPosition = targetPosition - headerHeight + 120;
-      } else {
-        targetPosition = targetPosition - headerHeight - 0;
+    if (fromOtherPage) {
+      let targetPosition = element.offsetTop;
+      
+      if (href === '#about') {
+        targetPosition = targetPosition - headerHeight + 55;
+      } else if (href === '#skills') {
+        targetPosition = targetPosition - headerHeight - 10;
+      } else if (href === '#portfolio') {
+        targetPosition = targetPosition - headerHeight - 70;
+      } else if (href === '#contact') {
+        targetPosition = targetPosition - headerHeight + 10;
       }
+      
+      return targetPosition;
+    } else {
+      return element.offsetTop - headerHeight;
     }
-    
-    if (href === '#skills') {
-      if (fromOtherPage) {
-        targetPosition = targetPosition - headerHeight - 20;
-      } else {
-        targetPosition = targetPosition - headerHeight - 50;
-      }
-    }
-    
-    if (href === '#portfolio') {
-      if (fromOtherPage) {
-        targetPosition = targetPosition - headerHeight - 100;
-      } else {
-        targetPosition = targetPosition - headerHeight - 150;
-      }
-    }
-    
-    if (href === '#contact') {
-      if (fromOtherPage) {
-        targetPosition = targetPosition - headerHeight - 80;
-      } else {
-        targetPosition = targetPosition - headerHeight - 100;
-      }
-    }
-    
-    return targetPosition;
   }
 
   private animateScroll(startPosition: number, distance: number) {

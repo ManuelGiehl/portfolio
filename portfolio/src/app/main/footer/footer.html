@@ -5,9 +5,9 @@
         <span class="logo-text">Manue<span class="logo-highlight">l</span></span>
       </div>
              <div class="legal-notice">
-               <a routerLink="/legal-notice" class="legal-link">{{ 'footer.legal' | translate }}</a>
+               <a (click)="navigateToLegalNotice()" class="legal-link">{{ 'footer.legal' | translate }}</a>
                <br>
-               <a routerLink="/privacy-policy" class="legal-link">{{ 'footer.privacy' | translate }}</a>
+               <a (click)="navigateToPrivacyPolicy()" class="legal-link">{{ 'footer.privacy' | translate }}</a>
              </div>
            </div>
            
