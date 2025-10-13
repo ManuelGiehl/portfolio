@@ -1,6 +1,6 @@
 .contact-section {
   background-color: #141D2F;
-  padding: 100px 0px;;
+  padding: 200px 0px;;
   position: relative;
   z-index: 5;
   overflow: hidden;
@@ -349,6 +349,10 @@ label a.privacy-link,
   .contact-header {
     margin-bottom: 3rem;
   }
+  
+  .scroll-to-top {
+    bottom: 0rem;
+  }
 }
 
 @media (min-width: 2560px) {
@@ -372,6 +376,7 @@ label a.privacy-link,
   
   .contact-content {
     gap: 2rem;
+    padding: 150px 0px; 
   }
   
   .contact-header {
