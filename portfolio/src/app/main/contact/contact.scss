@@ -39,7 +39,7 @@
   
   &:last-child {
     position: relative;
-    min-height: 100px;
+    min-height: 200px;
   }
 }
 
@@ -382,6 +382,10 @@
     right: 1rem;
     width: 45px;
     height: 45px;
+  }
+  
+  .contact-container:last-child {
+    min-height: 150px;
   }
 }
 
