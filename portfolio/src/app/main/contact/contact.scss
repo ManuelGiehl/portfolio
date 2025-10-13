@@ -220,16 +220,38 @@
   font-weight: 400;
   color: #FFFFFF;
   line-height: 1.5;
-  cursor: pointer;
+  cursor: default;
   flex: 1;
+}
+
+a.privacy-link,
+.checkbox-label a.privacy-link,
+label a.privacy-link,
+.privacy-link {
+  color: #70E61C !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  display: inline !important;
   
-  .privacy-link {
-    color: #9747FF;
-    text-decoration: underline;
-    
-    &:hover {
-      color: #70E61C;
-    }
+  &:hover {
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+  }
+  
+  &:visited {
+    color: #70E61C !important;
+  }
+  
+  &:active {
+    color: #FFFFFF !important;
+  }
+  
+  &:focus {
+    color: #70E61C !important;
+    outline: 2px solid #70E61C !important;
+    outline-offset: 2px !important;
   }
 }
 

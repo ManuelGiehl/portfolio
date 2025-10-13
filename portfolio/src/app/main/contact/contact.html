@@ -80,7 +80,7 @@
               (blur)="validateField('privacy')"
             >
             <label for="privacy" class="checkbox-label">
-              {{ 'contact.form.privacy' | translate }}
+              <span [innerHTML]="getPrivacyText()" (click)="handlePrivacyClick($event)"></span>
             </label>
             @if (getFieldError('privacy')) {
               <div class="error-message">

@@ -30,7 +30,7 @@
       "name": "Your name",
       "email": "Your email",
       "message": "Your message",
-      "privacy": "I've read the privacy policy and agree to the processing of my data as outlined.",
+      "privacy": "I've read the <a href='/privacy-policy' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
       "submit": "Send message :)",
       "sending": "Sending...",
       "success": "Thank you! Your message has been sent successfully."

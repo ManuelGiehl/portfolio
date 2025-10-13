@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class Contact {
   private translate = inject(TranslateService);
+  private router = inject(Router);
   
   contactForm: FormGroup;
   isSubmitting = signal(false);
@@ -103,5 +105,31 @@ export class Contact {
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+
+  getPrivacyText(): string {
+    const currentLang = this.translate.currentLang || 'en';
+    
+    if (currentLang === 'de') {
+      return 'Ich habe die <a href="/privacy-policy" class="privacy-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.';
+    } else {
+      return 'I\'ve read the <a href="/privacy-policy" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.';
+    }
+  }
+
+  handlePrivacyClick(event: Event): void {
+    const target = event.target as HTMLElement;
+    
+    if (target && target.tagName === 'A' && target.classList.contains('privacy-link')) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      this.router.navigate(['/privacy-policy']).then(() => {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      });
+    }
   }
 }

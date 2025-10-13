@@ -30,7 +30,7 @@
       "name": "Dein Name",
       "email": "Deine E-Mail",
       "message": "Deine Nachricht",
-      "privacy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "privacy": "Ich habe die <a href='/privacy-policy' class='privacy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
       "submit": "Nachricht senden :)",
       "sending": "Wird gesendet...",
       "success": "Danke! Deine Nachricht wurde erfolgreich gesendet."
