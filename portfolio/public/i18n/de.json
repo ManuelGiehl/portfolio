@@ -22,6 +22,11 @@
     "button": "Kontakt aufnehmen",
     "tooltip": {
       "title": "Ich habe ein besonderes Interesse am Lernen"
+    },
+    "skillLabels": {
+      "python": "Python",
+      "django": "Django",
+      "docker": "Docker"
     }
   },
   "portfolio": {
