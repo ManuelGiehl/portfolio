@@ -4,6 +4,21 @@
         <h2 class="title">{{ 'portfolio.title' | translate }}</h2>
       </div>
       <p class="portfolio-subtitle">{{ 'portfolio.subtitle' | translate }}</p>
+      <div class="portfolio-stack-filters" role="tablist" [attr.aria-label]="'portfolio.filters.aria' | translate">
+        @for (stack of stacks; track stack) {
+          <button
+            type="button"
+            class="stack-filter"
+            [class.stack-filter--active]="isStackActive(stack)"
+            (click)="selectStack(stack)"
+            role="tab"
+            [attr.aria-selected]="isStackActive(stack)"
+            [id]="'portfolio-tab-' + stack"
+          >
+            {{ ('portfolio.filters.' + stack) | translate }}
+          </button>
+        }
+      </div>
   </div>
   
   <div class="portfolio-container">
@@ -16,7 +31,18 @@
     </div>
 
     <div class="projects-container">
-      @for (project of projects; track project.id; let i = $index) {
+      @if (filteredProjects.length === 0) {
+        <p class="portfolio-empty" role="status">
+          @if (selectedStack === 'backend') {
+            {{ 'portfolio.empty.backend' | translate }}
+          } @else if (selectedStack === 'fullstack') {
+            {{ 'portfolio.empty.fullstack' | translate }}
+          } @else {
+            {{ 'portfolio.empty.frontend' | translate }}
+          }
+        </p>
+      }
+      @for (project of filteredProjects; track project.id; let i = $index) {
         <div class="project-section" [class.even]="i % 2 === 0" [class.odd]="i % 2 === 1">
           <div class="project-content">
             <div class="project-text" [class.text-left]="i % 2 === 1" [class.text-right]="i % 2 === 0">

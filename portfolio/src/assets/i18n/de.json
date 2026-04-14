@@ -19,7 +19,18 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "filters": {
+      "aria": "Projekte nach Schwerpunkt filtern",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack"
+    },
+    "empty": {
+      "frontend": "Noch keine Frontend-Projekte.",
+      "backend": "Reine Backend-Projekte erscheinen hier bald.",
+      "fullstack": "Fullstack-Projekte erscheinen hier bald."
+    }
   },
   "contact": {
     "title": "Kontakt",

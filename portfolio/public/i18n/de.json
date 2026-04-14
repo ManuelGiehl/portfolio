@@ -27,6 +27,17 @@
   "portfolio": {
     "title": "Portfolio",
     "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "filters": {
+      "aria": "Projekte nach Schwerpunkt filtern",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack"
+    },
+    "empty": {
+      "frontend": "Noch keine Frontend-Projekte.",
+      "backend": "Reine Backend-Projekte erscheinen hier bald.",
+      "fullstack": "Fullstack-Projekte erscheinen hier bald."
+    },
     "projects": {
       "join": {
         "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."

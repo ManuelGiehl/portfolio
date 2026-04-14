@@ -122,6 +122,52 @@
   box-sizing: border-box;
 }
 
+.portfolio-stack-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 15;
+}
+
+.stack-filter {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #70e61c;
+  background: transparent;
+  color: #ffffff;
+
+  &:hover {
+    background: rgba(112, 230, 28, 0.12);
+  }
+
+  &--active {
+    background: linear-gradient(135deg, #8a2be2, #6a1b9a);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.35);
+  }
+}
+
+.portfolio-empty {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
 .projects-container {
   max-width: 1200px;
   margin: 0 auto;

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
+export type ProjectStack = 'frontend' | 'backend' | 'fullstack';
+
 interface Project {
   id: number;
   title: string;
@@ -11,6 +13,7 @@ interface Project {
   image: string;
   liveTestLink: string;
   githubLink: string;
+  stack: ProjectStack;
 }
 
 @Component({
@@ -21,7 +24,11 @@ interface Project {
 })
 export class Portfolio {
   private translate = inject(TranslateService);
-  
+
+  readonly stacks: ProjectStack[] = ['frontend', 'backend', 'fullstack'];
+
+  selectedStack: ProjectStack = 'frontend';
+
   projects: Project[] = [
     {
       id: 1,
@@ -30,7 +37,8 @@ export class Portfolio {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: 'img/portfolio/join-photo.png',
       liveTestLink: '#',
-      githubLink: '#'
+      githubLink: '#',
+      stack: 'frontend'
     },
     {
       id: 2,
@@ -39,7 +47,8 @@ export class Portfolio {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Wraith to find the way to the next level and defeat the boss.',
       image: 'img/portfolio/wraith-photo.png',
       liveTestLink: 'https://manuel-giehl.developerakademie.net/wraith/index.html',
-      githubLink: 'https://github.com/ManuelGiehl/wraith'
+      githubLink: 'https://github.com/ManuelGiehl/wraith',
+      stack: 'frontend'
     },
     {
       id: 3,
@@ -48,9 +57,22 @@ export class Portfolio {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       image: 'img/portfolio/pokedex-photo.png',
       liveTestLink: 'https://manuel-giehl.developerakademie.net/modul8_pokedex/index.html',
-      githubLink: 'https://github.com/ManuelGiehl/pokedex'
+      githubLink: 'https://github.com/ManuelGiehl/pokedex',
+      stack: 'frontend'
     }
   ];
+
+  selectStack(stack: ProjectStack): void {
+    this.selectedStack = stack;
+  }
+
+  get filteredProjects(): Project[] {
+    return this.projects.filter((p) => p.stack === this.selectedStack);
+  }
+
+  isStackActive(stack: ProjectStack): boolean {
+    return this.selectedStack === stack;
+  }
 
   getProjectDescription(projectTitle: string): string {
     const projectKey = projectTitle.toLowerCase();
